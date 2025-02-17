@@ -1,0 +1,27 @@
+# Flask & Web Server
+Flask
+gunicorn
+
+# Dash for Interactive Dashboard
+dash
+dash-bootstrap-components
+plotly
+
+# Machine Learning & Forecasting
+numpy
+pandas
+scikit-learn
+statsmodels  # For SARIMA
+prophet  # For Prophet model
+tensorflow  # For LSTM
+torch  # For Transformer model
+
+# QR Code & Chatbot
+qrcode
+twilio  # For WhatsApp chatbot
+flask-socketio  # Real-time WebSockets
+
+# Visualization
+matplotlib
+seaborn
+bokeh

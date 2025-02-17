@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Market Intelligence - Future Only</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Future Price Forecast (No Historical)</h1>
+    
+    <form id="forecast-form">
+      <div class="form-group">
+        <label for="market">Select Market:</label>
+        <select id="market" name="market" required>
+          <option value="Pulwama_Pachhar">Pulwama Pachhar</option>
+          <option value="Pulwama_Pricoo">Pulwama Pricoo</option>
+          <option value="Shopian">Shopian</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="variety">Variety:</label>
+        <select id="variety" name="variety" required>
+          <option value="American">American</option>
+          <option value="Delicious">Delicious</option>
+          <option value="Kullu Delicious">Kullu Delicious</option>
+          <option value="Maharaji">Maharaji</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="grade">Grade:</label>
+        <select id="grade" name="grade" required>
+          <option value="A">Grade A</option>
+          <option value="B">Grade B</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="days">Days to Forecast:</label>
+        <input type="number" id="days" name="days" min="1" max="365" value="7" required>
+      </div>
+      <button type="submit" id="forecast-btn">
+        <span class="btn-text">Get Forecast</span>
+        <span class="spinner hidden"></span>
+      </button>
+    </form>
+
+    <div class="results">
+      <div class="chart-container">
+        <canvas id="forecastChart"></canvas>
+      </div>
+      <div id="forecastTable" class="hidden">
+        <h3>Forecast Details</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Price (₹/kg)</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('forecast-form');
+    const forecastBtn = document.getElementById('forecast-btn');
+    const ctx = document.getElementById('forecastChart').getContext('2d');
+    let forecastChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: [],
+        datasets: [
+          {
+            label: 'Forecasted Prices (₹/kg)',
+            data: [],
+            borderColor: 'orange',
+            borderWidth: 2,
+            fill: false
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          y: {
+            beginAtZero: false,
+            title: {
+              display: true,
+              text: 'Price (₹/kg)'
+            }
+          },
+          x: {
+            type: 'category', // no big time gaps
+            title: {
+              display: true,
+              text: 'Date'
+            }
+          }
+        }
+      }
+    });
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      forecastBtn.disabled = true;
+      forecastBtn.querySelector('.btn-text').classList.add('hidden');
+      forecastBtn.querySelector('.spinner').classList.remove('hidden');
+
+      try {
+        const market = document.getElementById('market').value;
+        const variety = document.getElementById('variety').value;
+        const grade  = document.getElementById('grade').value;
+        const days   = document.getElementById('days').value;
+
+        const response = await fetch('/forecast', {
+          method: 'POST',
+          body: new URLSearchParams({ market, variety, grade, days })
+        });
+        if (!response.ok) {
+          throw new Error('Failed to get forecast');
+        }
+
+        const result = await response.json();
+        if (result.status === 'error') {
+          throw new Error(result.message);
+        }
+
+        // We only have forecasted_prices and future_dates
+        const forecastDates  = result.future_dates; 
+        const forecastPrices = result.forecasted_prices; 
+
+        // Update chart
+        forecastChart.data.labels = forecastDates;
+        forecastChart.data.datasets[0].data = forecastPrices;
+        forecastChart.update();
+
+        // Update table
+        const tableBody = document.querySelector('#forecastTable tbody');
+        let rows = '';
+        for (let i = 0; i < forecastDates.length; i++) {
+          rows += `
+            <tr>
+              <td>${forecastDates[i]}</td>
+              <td>₹${parseFloat(forecastPrices[i]).toFixed(2)}</td>
+            </tr>
+          `;
+        }
+        tableBody.innerHTML = rows;
+        document.getElementById('forecastTable').classList.remove('hidden');
+
+      } catch(err) {
+        alert(`Error: ${err.message}`);
+      } finally {
+        forecastBtn.disabled = false;
+        forecastBtn.querySelector('.btn-text').classList.remove('hidden');
+        forecastBtn.querySelector('.spinner').classList.add('hidden');
+      }
+    });
+  </script>
+</body>
+</html>
