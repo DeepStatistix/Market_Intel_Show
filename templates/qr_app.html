@@ -1,0 +1,16 @@
+<!-- templates/qr_app.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>QR Code to My Forecast Web</title>
+</head>
+<body>
+  <h1>Scan to Open Forecast</h1>
+  {% if qr_data %}
+    <img src="{{ qr_data }}" alt="QR code" />
+  {% else %}
+    <p>Error: No QR data provided.</p>
+  {% endif %}
+</body>
+</html>

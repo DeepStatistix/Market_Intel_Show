@@ -72,7 +72,7 @@ def forecast():
 
         # For the official trading window, we'll assume the next "year" = current year + 1
         current_year = datetime.date.today().year
-        next_year = current_year + 1
+        next_year = current_year
 
         # Build entire official window
         full_window = get_future_dates_for_trading_window(actual_market, variety, grade, next_year)
@@ -125,6 +125,20 @@ def forecast():
     except Exception as e:
         logging.error(f"Error in /forecast route: {str(e)}")
         return jsonify({"status": "error", "message": str(e)}), 400
+# inside app.py
+from qr_code import generate_qr_code_base64
+
+@app.route("/qr_app")
+def qr_app():
+    # 1) Decide the link you want your QR code to open
+    # If your app is on your local network, you might eventually replace 127.0.0.1 with your LAN IP 
+    link_url = "http://127.0.0.1:5000/"  # or wherever your “future only” forecast is served
+
+    # 2) Generate the QR code as base64
+    qr_data = generate_qr_code_base64(link_url)
+
+    # 3) Render a template that displays this base64 as an <img>
+    return render_template("qr_app.html", qr_data=qr_data)
 
 if __name__ == "__main__":
     app.run(debug=True)
