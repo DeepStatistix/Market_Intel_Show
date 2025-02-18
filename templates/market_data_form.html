@@ -1,0 +1,24 @@
+<!-- file: templates/market_data_form.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select Market</title>
+</head>
+<body>
+    <h1>Select State & Market</h1>
+    <form method="POST">
+        <label>State:</label>
+        <select name="state" required>
+            {% for state in states %}
+                <option value="{{ state }}">{{ state }}</option>
+            {% endfor %}
+        </select>
+        
+        <label>Commodity:</label>
+        <input type="text" name="commodity" value="Apple" required>
+
+        <button type="submit">Show Market Data</button>
+    </form>
+</body>
+</html>
