@@ -132,7 +132,7 @@ from qr_code import generate_qr_code_base64
 def qr_app():
     # 1) Decide the link you want your QR code to open
     # If your app is on your local network, you might eventually replace 127.0.0.1 with your LAN IP 
-    link_url = "http://127.0.0.1:5000/"  # or wherever your “future only” forecast is served
+    link_url = "https://market-intel-show.onrender.com/"  # or wherever your “future only” forecast is served
 
     # 2) Generate the QR code as base64
     qr_data = generate_qr_code_base64(link_url)
