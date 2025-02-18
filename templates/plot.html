@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Price Trends</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h2, h3 {
+            color: #333;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        select {
+            padding: 5px;
+            margin-right: 15px;
+        }
+        button {
+            padding: 8px 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 15px;
+            border: 1px solid #ccc;
+            padding: 5px;
+            background: #f9f9f9;
+        }
+        .error {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h2>Market Price Trends</h2>
+
+    <form action="/plot" method="post">
+        <label for="market">Market:</label>
+        <select id="market" name="market">
+            {% for market in markets %}
+            <option value="{{ market }}">{{ market }}</option>
+            {% endfor %}
+        </select>
+
+        <label for="variety">Variety:</label>
+        <select id="variety" name="variety">
+            {% for variety in varieties %}
+            <option value="{{ variety }}">{{ variety }}</option>
+            {% endfor %}
+        </select>
+
+        <label for="grade">Grade:</label>
+        <select id="grade" name="grade">
+            {% for grade in grades %}
+            <option value="{{ grade }}">{{ grade }}</option>
+            {% endfor %}
+        </select>
+
+        <button type="submit">Show Trends</button>
+    </form>
+
+    {% if error %}
+        <p class="error">{{ error }}</p>
+    {% endif %}
+
+    {% if individual_plot %}
+        <h3>Selected Market Price Trend:</h3>
+        <img src="{{ individual_plot }}" alt="Individual Price Trend">
+    {% endif %}
+
+    {% if market_plot %}
+        <h3>Market Comparison (Average Price Across Markets for Selected Variety & Grade):</h3>
+        <img src="{{ market_plot }}" alt="Market Comparison">
+    {% endif %}
+
+    {% if variety_plot %}
+        <h3>Variety Comparison (Average Price Across Varieties in Selected Market & Grade):</h3>
+        <img src="{{ variety_plot }}" alt="Variety Comparison">
+    {% endif %}
+</body>
+</html>
