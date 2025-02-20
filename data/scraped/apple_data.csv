@@ -1,0 +1,942 @@
+S.No,District,Market,Commodity,Variety,Grade,Min Price,Max Price,Model Price,Date
+1,Delhi,Azadpur,Apple,American,Large,1143,6875,4330,13 Feb 2025
+2,Delhi,Azadpur,Apple,American,Large,1143,7143,4330,14 Feb 2025
+3,Delhi,Azadpur,Apple,American,Large,1143,7143,4330,15 Feb 2025
+4,Delhi,Azadpur,Apple,American,Large,1143,7143,4330,17 Feb 2025
+5,Delhi,Azadpur,Apple,American,Large,1143,7143,4330,18 Feb 2025
+6,Delhi,Azadpur,Apple,American,Large,1143,7143,4330,19 Feb 2025
+7,Delhi,Azadpur,Apple,American,Large,1143,7143,4330,20 Feb 2025
+8,Delhi,Azadpur,Apple,Royal Delicious,Large,6000,14000,10250,13 Feb 2025
+9,Delhi,Azadpur,Apple,Royal Delicious,Large,6000,14000,10250,14 Feb 2025
+10,Delhi,Azadpur,Apple,Royal Delicious,Large,6000,14000,10250,15 Feb 2025
+11,Delhi,Azadpur,Apple,Royal Delicious,Large,6000,14000,10250,17 Feb 2025
+12,Delhi,Azadpur,Apple,Royal Delicious,Large,6000,14000,10250,18 Feb 2025
+13,Delhi,Azadpur,Apple,Royal Delicious,Large,6000,14000,10250,19 Feb 2025
+14,Delhi,Azadpur,Apple,Royal Delicious,Large,6000,14000,10250,20 Feb 2025
+1,Bangalore,"Binny Mill (F&V), Bangalore",Apple,Apple,Large,8000,14000,12000,17 Feb 2025
+2,Bangalore,"Binny Mill (F&V), Bangalore",Apple,Apple,Large,10000,14000,12000,20 Feb 2025
+3,Bangalore,"Binny Mill (F&V), Bangalore",Apple,Apple,Large,10000,15000,13000,13 Feb 2025
+4,Bangalore,"Binny Mill (F&V), Bangalore",Apple,Apple,Large,10000,15000,13000,14 Feb 2025
+5,Bangalore,"Binny Mill (F&V), Bangalore",Apple,Apple,Large,10000,15000,13000,18 Feb 2025
+6,Bangalore,"Binny Mill (F&V), Bangalore",Apple,Apple,Large,10000,16000,12000,15 Feb 2025
+7,Bangalore,"Binny Mill (F&V), Bangalore",Apple,Apple,Large,10000,16000,14000,19 Feb 2025
+1,Auraiya,Achalda,Apple,Delicious,Medium,7500,7700,7600,13 Feb 2025
+2,Auraiya,Achalda,Apple,Delicious,Medium,7500,7700,7600,14 Feb 2025
+3,Auraiya,Achalda,Apple,Delicious,Medium,7500,7700,7600,15 Feb 2025
+4,Auraiya,Achalda,Apple,Delicious,Medium,7500,7700,7600,17 Feb 2025
+5,Auraiya,Achalda,Apple,Delicious,Medium,7700,7900,7800,18 Feb 2025
+6,Auraiya,Achalda,Apple,Delicious,Medium,7700,7900,7810,20 Feb 2025
+7,Auraiya,Achalda,Apple,Delicious,Medium,7720,7850,7800,19 Feb 2025
+8,Agra,Agra,Apple,Kasmir/Shimla - II,Medium,7800,8200,7950,17 Feb 2025
+9,Agra,Agra,Apple,Kasmir/Shimla - II,Medium,7900,8500,8250,18 Feb 2025
+10,Agra,Agra,Apple,Kasmir/Shimla - II,Medium,8000,8500,8260,19 Feb 2025
+11,Agra,Agra,Apple,Kasmir/Shimla - II,Medium,8100,8500,8300,13 Feb 2025
+12,Agra,Agra,Apple,Kasmir/Shimla - II,Medium,8200,8550,8340,15 Feb 2025
+13,Agra,Agra,Apple,Kasmir/Shimla - II,Medium,8200,8600,8350,14 Feb 2025
+14,Ambedkarnagar,Akbarpur,Apple,Delicious,Medium,7200,7450,7410,15 Feb 2025
+15,Ambedkarnagar,Akbarpur,Apple,Delicious,Medium,7300,7500,7400,13 Feb 2025
+16,Ambedkarnagar,Akbarpur,Apple,Delicious,Medium,7300,7550,7450,19 Feb 2025
+17,Ambedkarnagar,Akbarpur,Apple,Delicious,Medium,7400,7450,7420,18 Feb 2025
+18,Ambedkarnagar,Akbarpur,Apple,Delicious,Medium,7400,7500,7420,17 Feb 2025
+19,Ambedkarnagar,Akbarpur,Apple,Delicious,Medium,7500,7700,7600,20 Feb 2025
+20,Aligarh,Aligarh,Apple,Delicious,Medium,8240,8400,8340,19 Feb 2025
+21,Aligarh,Aligarh,Apple,Delicious,Medium,8250,8400,8350,20 Feb 2025
+22,Aligarh,Aligarh,Apple,Delicious,Medium,8250,8450,8350,18 Feb 2025
+23,Aligarh,Aligarh,Apple,Delicious,Medium,8250,8450,8360,14 Feb 2025
+24,Aligarh,Aligarh,Apple,Delicious,Medium,8300,8400,8350,15 Feb 2025
+25,Aligarh,Aligarh,Apple,Delicious,Medium,8300,8400,8360,17 Feb 2025
+26,Aligarh,Aligarh,Apple,Delicious,Medium,8300,8450,8370,16 Feb 2025
+27,Aligarh,Aligarh,Apple,Delicious,Medium,8300,8600,8350,13 Feb 2025
+28,Prayagraj,Allahabad,Apple,Kasmir/Shimla - II,Medium,8100,8200,8170,14 Feb 2025
+29,Prayagraj,Allahabad,Apple,Kasmir/Shimla - II,Medium,8100,8240,8150,13 Feb 2025
+30,Prayagraj,Allahabad,Apple,Kasmir/Shimla - II,Medium,8250,8350,8270,20 Feb 2025
+31,Amroha,Amroha,Apple,Delicious,Medium,7800,7900,7840,14 Feb 2025
+32,Maharajganj,Anandnagar,Apple,Delicious,Medium,7000,8000,7500,13 Feb 2025
+33,Maharajganj,Anandnagar,Apple,Delicious,Medium,7000,8000,7500,14 Feb 2025
+34,Maharajganj,Anandnagar,Apple,Delicious,Medium,7000,8000,7500,15 Feb 2025
+35,Maharajganj,Anandnagar,Apple,Delicious,Medium,7000,8000,7500,17 Feb 2025
+36,Maharajganj,Anandnagar,Apple,Delicious,Medium,7000,8000,7500,18 Feb 2025
+37,Maharajganj,Anandnagar,Apple,Delicious,Medium,7200,8000,7600,20 Feb 2025
+38,Banda,Atarra,Apple,Kasmir/Shimla - II,Medium,8040,8190,8115,18 Feb 2025
+39,Banda,Atarra,Apple,Kasmir/Shimla - II,Medium,8040,8240,8140,17 Feb 2025
+40,Banda,Atarra,Apple,Kasmir/Shimla - II,Medium,8050,8200,8125,15 Feb 2025
+41,Banda,Atarra,Apple,Kasmir/Shimla - II,Medium,8050,8250,8150,19 Feb 2025
+42,Banda,Atarra,Apple,Kasmir/Shimla - II,Medium,8050,8250,8150,20 Feb 2025
+43,Auraiya,Auraiya,Apple,Delicious,Medium,7400,7800,7600,14 Feb 2025
+44,Auraiya,Auraiya,Apple,Delicious,Medium,7400,7800,7620,13 Feb 2025
+45,Auraiya,Auraiya,Apple,Delicious,Medium,7600,8000,7800,15 Feb 2025
+46,Auraiya,Auraiya,Apple,Delicious,Medium,7600,8000,7800,17 Feb 2025
+47,Auraiya,Auraiya,Apple,Delicious,Medium,7600,8000,7800,18 Feb 2025
+48,Auraiya,Auraiya,Apple,Delicious,Medium,7600,8000,7810,19 Feb 2025
+49,Auraiya,Auraiya,Apple,Delicious,Medium,7700,8100,7950,20 Feb 2025
+50,Azamgarh,Azamgarh,Apple,Delicious,Medium,8100,8250,8175,13 Feb 2025
+51,Azamgarh,Azamgarh,Apple,Delicious,Medium,8100,8260,8180,14 Feb 2025
+52,Azamgarh,Azamgarh,Apple,Delicious,Medium,8175,8325,8250,15 Feb 2025
+53,Azamgarh,Azamgarh,Apple,Delicious,Medium,8200,8350,8275,17 Feb 2025
+54,Azamgarh,Azamgarh,Apple,Delicious,Medium,8225,8375,8300,18 Feb 2025
+55,Azamgarh,Azamgarh,Apple,Delicious,Medium,8225,8375,8300,20 Feb 2025
+56,Azamgarh,Azamgarh,Apple,Delicious,Medium,8300,8440,8370,19 Feb 2025
+57,Badaun,Badayoun,Apple,Delicious,Medium,7700,8000,7790,13 Feb 2025
+58,Badaun,Badayoun,Apple,Delicious,Medium,7700,8000,7795,14 Feb 2025
+59,Badaun,Badayoun,Apple,Delicious,Medium,7700,8000,7795,15 Feb 2025
+60,Badaun,Badayoun,Apple,Delicious,Medium,7720,8000,7790,16 Feb 2025
+61,Badaun,Badayoun,Apple,Delicious,Medium,7720,8000,7790,17 Feb 2025
+62,Badaun,Badayoun,Apple,Delicious,Medium,7800,8080,7880,18 Feb 2025
+63,Badaun,Badayoun,Apple,Delicious,Medium,7820,8080,7895,19 Feb 2025
+64,Badaun,Badayoun,Apple,Delicious,Medium,7850,8100,7910,20 Feb 2025
+65,Bareilly,Bahedi,Apple,Apple,Medium,4145,4220,4185,20 Feb 2025
+66,Bareilly,Bahedi,Apple,Apple,Medium,4150,4210,4175,19 Feb 2025
+67,Bareilly,Bahedi,Apple,Apple,Medium,4200,4250,4220,17 Feb 2025
+68,Bareilly,Bahedi,Apple,Apple,Medium,4215,4270,4240,16 Feb 2025
+69,Bareilly,Bahedi,Apple,Apple,Medium,4230,4275,4250,14 Feb 2025
+70,Bareilly,Bahedi,Apple,Other,Medium,4215,4260,4235,15 Feb 2025
+71,Bahraich,Bahraich,Apple,Kasmir/Shimla - II,Medium,8100,8500,8350,17 Feb 2025
+72,Bahraich,Bahraich,Apple,Kasmir/Shimla - II,Medium,8200,8500,8350,14 Feb 2025
+73,Bahraich,Bahraich,Apple,Kasmir/Shimla - II,Medium,8200,8500,8360,15 Feb 2025
+74,Bahraich,Bahraich,Apple,Kasmir/Shimla - II,Medium,8200,8500,8360,18 Feb 2025
+75,Bahraich,Bahraich,Apple,Kasmir/Shimla - II,Medium,8200,8600,8400,19 Feb 2025
+76,Bahraich,Bahraich,Apple,Kasmir/Shimla - II,Medium,8200,8620,8400,13 Feb 2025
+77,Bahraich,Bahraich,Apple,Kasmir/Shimla - II,Medium,8250,8450,8360,16 Feb 2025
+78,Ballia,Ballia,Apple,Delicious,Medium,8100,8250,8175,13 Feb 2025
+79,Ballia,Ballia,Apple,Delicious,Medium,8100,8260,8175,15 Feb 2025
+80,Ballia,Ballia,Apple,Delicious,Medium,8100,8260,8180,14 Feb 2025
+81,Ballia,Ballia,Apple,Delicious,Medium,8200,8360,8280,18 Feb 2025
+82,Ballia,Ballia,Apple,Delicious,Medium,8200,8360,8290,19 Feb 2025
+83,Ballia,Ballia,Apple,Delicious,Medium,8230,8290,8260,17 Feb 2025
+84,Ballia,Ballia,Apple,Delicious,Medium,8260,8430,8350,20 Feb 2025
+85,Balrampur,Balrampur,Apple,Delicious,Medium,8250,8480,8370,13 Feb 2025
+86,Balrampur,Balrampur,Apple,Delicious,Medium,8300,8500,8400,14 Feb 2025
+87,Balrampur,Balrampur,Apple,Delicious,Medium,8300,8500,8400,15 Feb 2025
+88,Balrampur,Balrampur,Apple,Delicious,Medium,8300,8500,8400,18 Feb 2025
+89,Balrampur,Balrampur,Apple,Delicious,Medium,8300,8500,8400,19 Feb 2025
+90,Balrampur,Balrampur,Apple,Delicious,Medium,8300,8540,8425,20 Feb 2025
+91,Balrampur,Balrampur,Apple,Delicious,Medium,8400,8600,8500,16 Feb 2025
+92,Balrampur,Balrampur,Apple,Delicious,Medium,8400,8600,8500,17 Feb 2025
+93,Banda,Banda,Apple,Kasmir/Shimla - II,Medium,8100,8250,8160,14 Feb 2025
+94,Banda,Banda,Apple,Kasmir/Shimla - II,Medium,8100,8250,8175,13 Feb 2025
+95,Banda,Banda,Apple,Kasmir/Shimla - II,Medium,8130,8270,8200,15 Feb 2025
+96,Banda,Banda,Apple,Kasmir/Shimla - II,Medium,8150,8270,8200,19 Feb 2025
+97,Banda,Banda,Apple,Kasmir/Shimla - II,Medium,8150,8300,8225,16 Feb 2025
+98,Banda,Banda,Apple,Kasmir/Shimla - II,Medium,8150,8350,8250,17 Feb 2025
+99,Banda,Banda,Apple,Kasmir/Shimla - II,Medium,8225,8370,8300,20 Feb 2025
+100,Unnao,Bangarmau,Apple,Kasmir/Shimla - II,Medium,7800,7900,7850,14 Feb 2025
+101,Unnao,Bangarmau,Apple,Kasmir/Shimla - II,Medium,7810,7910,7860,15 Feb 2025
+102,Unnao,Bangarmau,Apple,Kasmir/Shimla - II,Medium,7820,7920,7870,16 Feb 2025
+103,Unnao,Bangarmau,Apple,Kasmir/Shimla - II,Medium,7830,7930,7880,17 Feb 2025
+104,Unnao,Bangarmau,Apple,Kasmir/Shimla - II,Medium,7850,7950,7900,18 Feb 2025
+105,Unnao,Bangarmau,Apple,Kasmir/Shimla - II,Medium,7850,7950,7900,19 Feb 2025
+106,Barabanki,Barabanki,Apple,Delicious,Medium,8050,8150,8100,13 Feb 2025
+107,Barabanki,Barabanki,Apple,Delicious,Medium,8050,8150,8100,18 Feb 2025
+108,Barabanki,Barabanki,Apple,Delicious,Medium,8050,8150,8100,20 Feb 2025
+109,Barabanki,Barabanki,Apple,Delicious,Medium,8050,8150,8110,19 Feb 2025
+110,Barabanki,Barabanki,Apple,Delicious,Medium,8100,8200,8140,15 Feb 2025
+111,Barabanki,Barabanki,Apple,Delicious,Medium,8100,8200,8150,14 Feb 2025
+112,Barabanki,Barabanki,Apple,Delicious,Medium,8100,8200,8150,17 Feb 2025
+113,Baghpat,Baraut,Apple,Kasmir/Shimla - II,Medium,7800,8050,7950,13 Feb 2025
+114,Baghpat,Baraut,Apple,Kasmir/Shimla - II,Medium,7850,8050,7950,14 Feb 2025
+115,Baghpat,Baraut,Apple,Kasmir/Shimla - II,Medium,7850,8050,7950,15 Feb 2025
+116,Baghpat,Baraut,Apple,Kasmir/Shimla - II,Medium,7850,8050,7950,16 Feb 2025
+117,Baghpat,Baraut,Apple,Kasmir/Shimla - II,Medium,7850,8050,7950,17 Feb 2025
+118,Baghpat,Baraut,Apple,Kasmir/Shimla - II,Medium,7850,8050,7960,18 Feb 2025
+119,Baghpat,Baraut,Apple,Kasmir/Shimla - II,Medium,7850,8050,7960,19 Feb 2025
+120,Baghpat,Baraut,Apple,Kasmir/Shimla - II,Medium,7850,8050,7960,20 Feb 2025
+121,Bareilly,Bareilly,Apple,Apple,Medium,7000,7050,7025,13 Feb 2025
+122,Bareilly,Bareilly,Apple,Apple,Medium,7000,7100,7050,14 Feb 2025
+123,Bareilly,Bareilly,Apple,Apple,Medium,7950,8050,8000,15 Feb 2025
+124,Bareilly,Bareilly,Apple,Apple,Medium,7950,8050,8020,17 Feb 2025
+125,Bareilly,Bareilly,Apple,Apple,Medium,8000,8050,8025,16 Feb 2025
+126,Bareilly,Bareilly,Apple,Apple,Medium,8000,8050,8025,18 Feb 2025
+127,Bareilly,Bareilly,Apple,Apple,Medium,8000,8100,8040,19 Feb 2025
+128,Basti,Basti,Apple,Delicious,Medium,8050,8250,8150,13 Feb 2025
+129,Basti,Basti,Apple,Delicious,Medium,8050,8250,8150,20 Feb 2025
+130,Basti,Basti,Apple,Delicious,Medium,8100,8300,8200,15 Feb 2025
+131,Basti,Basti,Apple,Delicious,Medium,8130,8330,8230,18 Feb 2025
+132,Basti,Basti,Apple,Delicious,Medium,8150,8350,8250,16 Feb 2025
+133,Basti,Basti,Apple,Delicious,Medium,8175,8375,8275,17 Feb 2025
+134,Basti,Basti,Apple,Delicious,Medium,8200,8400,8300,19 Feb 2025
+135,Etawah,Bharthna,Apple,Delicious,Medium,7330,7730,7530,14 Feb 2025
+136,Etawah,Bharthna,Apple,Delicious,Medium,7330,7730,7530,15 Feb 2025
+137,Etawah,Bharthna,Apple,Delicious,Medium,7330,7730,7530,19 Feb 2025
+138,Etawah,Bharthna,Apple,Delicious,Medium,7350,7750,7550,17 Feb 2025
+139,Etawah,Bharthna,Apple,Delicious,Medium,7360,7760,7560,13 Feb 2025
+140,Etawah,Bharthna,Apple,Delicious,Medium,7360,7760,7560,18 Feb 2025
+141,Hamirpur,Bharuasumerpur,Apple,Kasmir/Shimla - II,Medium,7950,8300,8200,16 Feb 2025
+142,Hamirpur,Bharuasumerpur,Apple,Kasmir/Shimla - II,Medium,8000,8250,8200,14 Feb 2025
+143,Hamirpur,Bharuasumerpur,Apple,Kasmir/Shimla - II,Medium,8050,8200,8155,19 Feb 2025
+144,Hamirpur,Bharuasumerpur,Apple,Kasmir/Shimla - II,Medium,8100,8300,8225,17 Feb 2025
+145,Hamirpur,Bharuasumerpur,Apple,Kasmir/Shimla - II,Medium,8100,8300,8250,18 Feb 2025
+146,Shravasti,Bhinga,Apple,Kasmir/Shimla - II,Medium,8140,8600,8350,17 Feb 2025
+147,Shravasti,Bhinga,Apple,Kasmir/Shimla - II,Medium,8150,8550,8375,18 Feb 2025
+148,Shravasti,Bhinga,Apple,Kasmir/Shimla - II,Medium,8200,8625,8400,15 Feb 2025
+149,Shravasti,Bhinga,Apple,Kasmir/Shimla - II,Medium,8200,8650,8400,14 Feb 2025
+150,Shravasti,Bhinga,Apple,Kasmir/Shimla - II,Medium,8200,8650,8400,19 Feb 2025
+151,Fatehpur,Bindki,Apple,Delicious,Medium,8170,8320,8230,18 Feb 2025
+152,Fatehpur,Bindki,Apple,Delicious,Medium,8200,8280,8240,13 Feb 2025
+153,Fatehpur,Bindki,Apple,Delicious,Medium,8200,8300,8250,17 Feb 2025
+154,Fatehpur,Bindki,Apple,Delicious,Medium,8200,8300,8260,14 Feb 2025
+155,Fatehpur,Bindki,Apple,Delicious,Medium,8200,8340,8270,16 Feb 2025
+156,Bulandshahar,Buland Shahr,Apple,Delicious,Medium,7800,8050,7950,15 Feb 2025
+157,Bulandshahar,Buland Shahr,Apple,Delicious,Medium,7800,8050,7960,17 Feb 2025
+158,Bulandshahar,Buland Shahr,Apple,Delicious,Medium,7800,8050,7960,18 Feb 2025
+159,Bulandshahar,Buland Shahr,Apple,Delicious,Medium,7800,8050,7965,19 Feb 2025
+160,Bulandshahar,Buland Shahr,Apple,Delicious,Medium,7800,8100,7900,14 Feb 2025
+161,Bulandshahar,Buland Shahr,Apple,Delicious,Medium,7900,8150,8050,13 Feb 2025
+162,Sambhal,Chandausi,Apple,Apple,Medium,7850,7900,7880,13 Feb 2025
+163,Sambhal,Chandausi,Apple,Apple,Medium,7850,7900,7880,15 Feb 2025
+164,Sambhal,Chandausi,Apple,Apple,Medium,7850,7900,7885,14 Feb 2025
+165,Sambhal,Chandausi,Apple,Apple,Medium,7850,7950,7900,18 Feb 2025
+166,Sambhal,Chandausi,Apple,Apple,Medium,7850,7950,7900,19 Feb 2025
+167,Sambhal,Chandausi,Apple,Apple,Medium,7900,8000,7950,20 Feb 2025
+168,Chandauli,Chandoli,Apple,Delicious,Medium,8150,8250,8200,13 Feb 2025
+169,Chandauli,Chandoli,Apple,Delicious,Medium,8185,8285,8235,14 Feb 2025
+170,Chandauli,Chandoli,Apple,Delicious,Medium,8200,8300,8250,15 Feb 2025
+171,Chandauli,Chandoli,Apple,Delicious,Medium,8325,8425,8375,17 Feb 2025
+172,Chandauli,Chandoli,Apple,Delicious,Medium,8325,8425,8375,19 Feb 2025
+173,Chandauli,Chandoli,Apple,Delicious,Medium,8330,8430,8380,18 Feb 2025
+174,Chandauli,Chandoli,Apple,Delicious,Medium,8330,8430,8380,20 Feb 2025
+175,Kannuj,Chhibramau,Apple,Delicious,Medium,7550,7750,7650,14 Feb 2025
+176,Kannuj,Chhibramau,Apple,Delicious,Medium,7600,7800,7700,15 Feb 2025
+177,Kannuj,Chhibramau,Apple,Delicious,Medium,7600,7800,7700,19 Feb 2025
+178,Kannuj,Chhibramau,Apple,Delicious,Medium,7650,7850,7750,16 Feb 2025
+179,Kannuj,Chhibramau,Apple,Delicious,Medium,7650,7850,7750,17 Feb 2025
+180,Kannuj,Chhibramau,Apple,Delicious,Medium,7700,7900,7800,18 Feb 2025
+181,Kanpur,Choubepur,Apple,Apple,Medium,7600,7800,7700,14 Feb 2025
+182,Kanpur,Choubepur,Apple,Apple,Medium,7700,7900,7800,13 Feb 2025
+183,Kanpur,Choubepur,Apple,Apple,Medium,7700,7900,7800,15 Feb 2025
+184,Kanpur,Choubepur,Apple,Apple,Medium,7750,7950,7850,17 Feb 2025
+185,Kanpur,Choubepur,Apple,Apple,Medium,7800,7950,7850,18 Feb 2025
+186,Kanpur,Choubepur,Apple,Apple,Medium,7800,7950,7850,19 Feb 2025
+187,Kanpur,Choubepur,Apple,Apple,Medium,7800,8000,7900,20 Feb 2025
+188,Gautam Budh Nagar,Dadri,Apple,Kasmir/Shimla - II,Medium,7650,8000,7800,13 Feb 2025
+189,Gautam Budh Nagar,Dadri,Apple,Kasmir/Shimla - II,Medium,7800,8050,7950,14 Feb 2025
+190,Gautam Budh Nagar,Dadri,Apple,Kasmir/Shimla - II,Medium,7800,8100,7980,16 Feb 2025
+191,Gautam Budh Nagar,Dadri,Apple,Kasmir/Shimla - II,Medium,7800,8150,7950,15 Feb 2025
+192,Gautam Budh Nagar,Dadri,Apple,Kasmir/Shimla - II,Medium,7800,8150,7950,17 Feb 2025
+193,Gautam Budh Nagar,Dadri,Apple,Kasmir/Shimla - II,Medium,7800,8150,7950,18 Feb 2025
+194,Gautam Budh Nagar,Dadri,Apple,Kasmir/Shimla - II,Medium,7800,8150,7950,19 Feb 2025
+195,Gautam Budh Nagar,Dadri,Apple,Kasmir/Shimla - II,Medium,7850,8150,7980,20 Feb 2025
+196,Gautam Budh Nagar,Dankaur,Apple,Delicious,Medium,7610,7855,7705,15 Feb 2025
+197,Gautam Budh Nagar,Dankaur,Apple,Delicious,Medium,7640,7890,7740,14 Feb 2025
+198,Gautam Budh Nagar,Dankaur,Apple,Delicious,Medium,7800,8100,7900,19 Feb 2025
+199,Gautam Budh Nagar,Dankaur,Apple,Delicious,Medium,7810,8125,7900,16 Feb 2025
+200,Gautam Budh Nagar,Dankaur,Apple,Delicious,Medium,7815,8125,7900,18 Feb 2025
+201,Gautam Budh Nagar,Dankaur,Apple,Delicious,Medium,7815,8155,7955,17 Feb 2025
+202,Deoria,Devariya,Apple,Delicious,Medium,8170,8185,8175,13 Feb 2025
+203,Deoria,Devariya,Apple,Delicious,Medium,8170,8185,8180,14 Feb 2025
+204,Deoria,Devariya,Apple,Delicious,Medium,8230,8250,8240,15 Feb 2025
+205,Deoria,Devariya,Apple,Delicious,Medium,8340,8355,8345,18 Feb 2025
+206,Deoria,Devariya,Apple,Delicious,Medium,8340,8355,8350,19 Feb 2025
+207,Amroha,Dhanaura,Apple,Delicious,Medium,3000,3500,3200,13 Feb 2025
+208,Amroha,Dhanaura,Apple,Delicious,Medium,3000,3500,3200,14 Feb 2025
+209,Amroha,Dhanaura,Apple,Delicious,Medium,3000,3500,3200,15 Feb 2025
+210,Amroha,Dhanaura,Apple,Delicious,Medium,3000,3500,3200,16 Feb 2025
+211,Etah,Etah,Apple,Kasmir/Shimla - II,Medium,8000,9000,8160,16 Feb 2025
+212,Etah,Etah,Apple,Kasmir/Shimla - II,Medium,8000,9000,8180,17 Feb 2025
+213,Etah,Etah,Apple,Kasmir/Shimla - II,Medium,8000,9000,8180,18 Feb 2025
+214,Etah,Etah,Apple,Kasmir/Shimla - II,Medium,8000,9000,8200,13 Feb 2025
+215,Etah,Etah,Apple,Kasmir/Shimla - II,Medium,8000,9000,8200,14 Feb 2025
+216,Etah,Etah,Apple,Kasmir/Shimla - II,Medium,8000,9000,8200,15 Feb 2025
+217,Etah,Etah,Apple,Kasmir/Shimla - II,Medium,8000,9000,8200,19 Feb 2025
+218,Etawah,Etawah,Apple,Delicious,Medium,7100,7750,7500,17 Feb 2025
+219,Etawah,Etawah,Apple,Delicious,Medium,7150,7700,7550,13 Feb 2025
+220,Etawah,Etawah,Apple,Delicious,Medium,7150,7700,7550,14 Feb 2025
+221,Etawah,Etawah,Apple,Delicious,Medium,7150,7750,7550,18 Feb 2025
+222,Etawah,Etawah,Apple,Delicious,Medium,7150,7750,7550,19 Feb 2025
+223,Etawah,Etawah,Apple,Delicious,Medium,7200,7800,7500,15 Feb 2025
+224,Etawah,Etawah,Apple,Delicious,Medium,7200,7850,7600,20 Feb 2025
+225,Ayodhya,Faizabad,Apple,Kasmir/Shimla - II,Medium,7260,7485,7400,15 Feb 2025
+226,Ayodhya,Faizabad,Apple,Kasmir/Shimla - II,Medium,7300,7400,7350,13 Feb 2025
+227,Ayodhya,Faizabad,Apple,Kasmir/Shimla - II,Medium,7320,7500,7400,17 Feb 2025
+228,Ayodhya,Faizabad,Apple,Kasmir/Shimla - II,Medium,7350,7500,7400,14 Feb 2025
+229,Ayodhya,Faizabad,Apple,Kasmir/Shimla - II,Medium,7350,7500,7400,18 Feb 2025
+230,Ayodhya,Faizabad,Apple,Kasmir/Shimla - II,Medium,7370,7500,7410,19 Feb 2025
+231,Ayodhya,Faizabad,Apple,Kasmir/Shimla - II,Medium,7400,7525,7450,20 Feb 2025
+232,Farukhabad,Farukhabad,Apple,Delicious,Medium,7750,7950,7850,15 Feb 2025
+233,Farukhabad,Farukhabad,Apple,Delicious,Medium,7800,8000,7900,14 Feb 2025
+234,Farukhabad,Farukhabad,Apple,Delicious,Medium,7800,8000,7900,18 Feb 2025
+235,Farukhabad,Farukhabad,Apple,Delicious,Medium,7800,8050,7950,19 Feb 2025
+236,Farukhabad,Farukhabad,Apple,Delicious,Medium,7850,8050,7900,13 Feb 2025
+237,Farukhabad,Farukhabad,Apple,Delicious,Medium,7900,8100,8000,17 Feb 2025
+238,Farukhabad,Farukhabad,Apple,Delicious,Medium,8000,8300,8150,20 Feb 2025
+239,Fatehpur,Fatehpur,Apple,Delicious,Medium,8000,8400,8200,14 Feb 2025
+240,Fatehpur,Fatehpur,Apple,Delicious,Medium,8000,8400,8200,15 Feb 2025
+241,Fatehpur,Fatehpur,Apple,Delicious,Medium,8000,8400,8215,17 Feb 2025
+242,Fatehpur,Fatehpur,Apple,Delicious,Medium,8100,8300,8210,16 Feb 2025
+243,Fatehpur,Fatehpur,Apple,Delicious,Medium,8100,8400,8250,18 Feb 2025
+244,Fatehpur,Fatehpur,Apple,Delicious,Medium,8100,8400,8260,19 Feb 2025
+245,Agra,Fatehpur Sikri,Apple,Delicious,Medium,8150,8350,8240,13 Feb 2025
+246,Agra,Fatehpur Sikri,Apple,Delicious,Medium,8150,8350,8250,14 Feb 2025
+247,Agra,Fatehpur Sikri,Apple,Delicious,Medium,8150,8350,8250,18 Feb 2025
+248,Agra,Fatehpur Sikri,Apple,Delicious,Medium,8160,8300,8230,15 Feb 2025
+249,Agra,Fatehpur Sikri,Apple,Delicious,Medium,8200,8350,8280,19 Feb 2025
+250,Firozabad,Firozabad,Apple,Delicious,Medium,8030,8280,8160,13 Feb 2025
+251,Firozabad,Firozabad,Apple,Delicious,Medium,8050,8300,8180,14 Feb 2025
+252,Firozabad,Firozabad,Apple,Delicious,Medium,8160,8430,8300,17 Feb 2025
+253,Firozabad,Firozabad,Apple,Delicious,Medium,8180,8470,8330,19 Feb 2025
+254,Firozabad,Firozabad,Apple,Delicious,Medium,8180,8525,8360,16 Feb 2025
+255,Firozabad,Firozabad,Apple,Delicious,Medium,8300,8575,8450,20 Feb 2025
+256,Ghazipur,Gazipur,Apple,Delicious,Medium,5250,5350,5300,15 Feb 2025
+257,Ghazipur,Gazipur,Apple,Delicious,Medium,8150,8250,8200,13 Feb 2025
+258,Ghazipur,Gazipur,Apple,Delicious,Medium,8200,8400,8300,14 Feb 2025
+259,Ghazipur,Gazipur,Apple,Delicious,Medium,8300,8380,8340,17 Feb 2025
+260,Ghazipur,Gazipur,Apple,Delicious,Medium,8300,8400,8350,18 Feb 2025
+261,Ghazipur,Gazipur,Apple,Delicious,Medium,8300,8400,8350,19 Feb 2025
+262,Ghazipur,Gazipur,Apple,Delicious,Medium,8300,8400,8350,20 Feb 2025
+263,Ghaziabad,Ghaziabad,Apple,Kasmir/Shimla - II,Medium,7950,8050,8000,13 Feb 2025
+264,Ghaziabad,Ghaziabad,Apple,Kasmir/Shimla - II,Medium,7950,8050,8000,14 Feb 2025
+265,Ghaziabad,Ghaziabad,Apple,Kasmir/Shimla - II,Medium,7950,8050,8000,15 Feb 2025
+266,Ghaziabad,Ghaziabad,Apple,Kasmir/Shimla - II,Medium,7950,8050,8000,16 Feb 2025
+267,Ghaziabad,Ghaziabad,Apple,Kasmir/Shimla - II,Medium,7950,8050,8000,17 Feb 2025
+268,Ghaziabad,Ghaziabad,Apple,Kasmir/Shimla - II,Medium,7950,8050,8000,18 Feb 2025
+269,Ghaziabad,Ghaziabad,Apple,Kasmir/Shimla - II,Medium,7950,8050,8000,19 Feb 2025
+270,Mainpuri,Ghiraur,Apple,Delicious,Medium,8090,8290,8190,13 Feb 2025
+271,Mainpuri,Ghiraur,Apple,Delicious,Medium,8140,8340,8240,14 Feb 2025
+272,Mainpuri,Ghiraur,Apple,Delicious,Medium,8150,8350,8250,19 Feb 2025
+273,Mainpuri,Ghiraur,Apple,Delicious,Medium,8155,8355,8255,20 Feb 2025
+274,Mainpuri,Ghiraur,Apple,Delicious,Medium,8195,8395,8295,16 Feb 2025
+275,Mainpuri,Ghiraur,Apple,Delicious,Medium,8200,8400,8300,17 Feb 2025
+276,Lakhimpur,Golagokarnath,Apple,Delicious,Large,7800,7900,7840,17 Feb 2025
+277,Lakhimpur,Golagokarnath,Apple,Delicious,Medium,7750,7900,7840,13 Feb 2025
+278,Lakhimpur,Golagokarnath,Apple,Delicious,Medium,7760,7900,7830,18 Feb 2025
+279,Lakhimpur,Golagokarnath,Apple,Delicious,Medium,7800,7900,7840,17 Feb 2025
+280,Lakhimpur,Golagokarnath,Apple,Delicious,Medium,7800,7900,7840,19 Feb 2025
+281,Lakhimpur,Golagokarnath,Apple,Delicious,Medium,7800,7900,7850,15 Feb 2025
+282,Lakhimpur,Golagokarnath,Apple,Delicious,Medium,7800,7900,7850,20 Feb 2025
+283,Lakhimpur,Golagokarnath,Apple,Delicious,Medium,7800,7900,7860,14 Feb 2025
+284,Gonda,Gonda,Apple,Delicious,Medium,8100,8600,8400,13 Feb 2025
+285,Gonda,Gonda,Apple,Delicious,Medium,8100,8700,8300,16 Feb 2025
+286,Gonda,Gonda,Apple,Delicious,Medium,8100,8700,8300,17 Feb 2025
+287,Gonda,Gonda,Apple,Delicious,Medium,8200,8800,8400,20 Feb 2025
+288,Gonda,Gonda,Apple,Delicious,Medium,8200,8800,8500,18 Feb 2025
+289,Gonda,Gonda,Apple,Delicious,Medium,8300,8800,8500,14 Feb 2025
+290,Gonda,Gonda,Apple,Delicious,Medium,8300,8800,8500,19 Feb 2025
+291,Gonda,Gonda,Apple,Delicious,Medium,8450,8900,8600,15 Feb 2025
+292,Bhadohi(Sant Ravi Nagar),Gopiganj,Apple,Delicious,Medium,8150,8250,8200,14 Feb 2025
+293,Bhadohi(Sant Ravi Nagar),Gopiganj,Apple,Delicious,Medium,8170,8270,8220,13 Feb 2025
+294,Bhadohi(Sant Ravi Nagar),Gopiganj,Apple,Delicious,Medium,8170,8270,8220,15 Feb 2025
+295,Bhadohi(Sant Ravi Nagar),Gopiganj,Apple,Delicious,Medium,8200,8260,8230,17 Feb 2025
+296,Bhadohi(Sant Ravi Nagar),Gopiganj,Apple,Delicious,Medium,8200,8280,8240,16 Feb 2025
+297,Bhadohi(Sant Ravi Nagar),Gopiganj,Apple,Delicious,Medium,8260,8360,8310,18 Feb 2025
+298,Bhadohi(Sant Ravi Nagar),Gopiganj,Apple,Delicious,Medium,8270,8370,8320,19 Feb 2025
+299,Bhadohi(Sant Ravi Nagar),Gopiganj,Apple,Delicious,Medium,8300,8380,8340,20 Feb 2025
+300,Gorakhpur,Gorakhpur,Apple,Delicious,Medium,8050,8400,8200,13 Feb 2025
+301,Gorakhpur,Gorakhpur,Apple,Delicious,Medium,8100,8450,8250,15 Feb 2025
+302,Gorakhpur,Gorakhpur,Apple,Delicious,Medium,8250,8350,8300,14 Feb 2025
+303,Gorakhpur,Gorakhpur,Apple,Delicious,Medium,8250,8350,8300,17 Feb 2025
+304,Gorakhpur,Gorakhpur,Apple,Delicious,Medium,8250,8350,8300,19 Feb 2025
+305,Gorakhpur,Gorakhpur,Apple,Delicious,Medium,8300,8400,8350,18 Feb 2025
+306,Gorakhpur,Gorakhpur,Apple,Delicious,Medium,8300,8400,8350,20 Feb 2025
+307,Hathras,Haathras,Apple,Delicious,Medium,8050,8350,8200,17 Feb 2025
+308,Hathras,Haathras,Apple,Delicious,Medium,8100,8300,8250,18 Feb 2025
+309,Hathras,Haathras,Apple,Delicious,Medium,8100,8340,8220,19 Feb 2025
+310,Hathras,Haathras,Apple,Delicious,Medium,8100,8360,8230,15 Feb 2025
+311,Hathras,Haathras,Apple,Delicious,Medium,8100,8400,8250,14 Feb 2025
+312,Hathras,Haathras,Apple,Delicious,Medium,8100,8460,8280,13 Feb 2025
+313,Ghaziabad,Hapur,Apple,Delicious,Medium,7800,7900,7820,13 Feb 2025
+314,Ghaziabad,Hapur,Apple,Delicious,Medium,7900,8000,7950,14 Feb 2025
+315,Ghaziabad,Hapur,Apple,Delicious,Medium,7900,8000,7950,16 Feb 2025
+316,Ghaziabad,Hapur,Apple,Delicious,Medium,7900,8000,7950,18 Feb 2025
+317,Ghaziabad,Hapur,Apple,Delicious,Medium,7900,8000,7950,19 Feb 2025
+318,Hardoi,Hardoi,Apple,Kasmir/Shimla - II,Medium,7800,7880,7845,13 Feb 2025
+319,Hardoi,Hardoi,Apple,Kasmir/Shimla - II,Medium,7800,7880,7845,14 Feb 2025
+320,Hardoi,Hardoi,Apple,Kasmir/Shimla - II,Medium,7800,7890,7850,15 Feb 2025
+321,Hardoi,Hardoi,Apple,Kasmir/Shimla - II,Medium,7820,7880,7855,19 Feb 2025
+322,Hardoi,Hardoi,Apple,Kasmir/Shimla - II,Medium,7820,7890,7860,18 Feb 2025
+323,Hardoi,Hardoi,Apple,Kasmir/Shimla - II,Medium,7820,7890,7865,17 Feb 2025
+324,Hardoi,Hardoi,Apple,Kasmir/Shimla - II,Medium,7830,7890,7860,20 Feb 2025
+325,Amroha,Hasanpur,Apple,Delicious,Medium,3210,4000,3520,13 Feb 2025
+326,Amroha,Hasanpur,Apple,Delicious,Medium,3210,4000,3520,14 Feb 2025
+327,Amroha,Hasanpur,Apple,Delicious,Medium,3210,4000,3520,15 Feb 2025
+328,Amroha,Hasanpur,Apple,Delicious,Medium,3210,4000,3520,16 Feb 2025
+329,Amroha,Hasanpur,Apple,Delicious,Medium,3210,4000,3520,17 Feb 2025
+330,Amroha,Hasanpur,Apple,Delicious,Medium,3210,4000,3520,18 Feb 2025
+331,Amroha,Hasanpur,Apple,Delicious,Medium,3210,4000,3520,19 Feb 2025
+332,Amroha,Hasanpur,Apple,Delicious,Medium,3210,4000,3520,20 Feb 2025
+333,Amethi,Jafarganj,Apple,Delicious,Medium,8000,8200,8100,13 Feb 2025
+334,Amethi,Jafarganj,Apple,Delicious,Medium,8000,8200,8100,15 Feb 2025
+335,Amethi,Jafarganj,Apple,Delicious,Medium,8050,8170,8110,14 Feb 2025
+336,Amethi,Jafarganj,Apple,Delicious,Medium,8050,8200,8110,18 Feb 2025
+337,Amethi,Jafarganj,Apple,Delicious,Medium,8050,8200,8120,17 Feb 2025
+338,Amethi,Jafarganj,Apple,Delicious,Medium,8050,8200,8120,19 Feb 2025
+339,Bulandshahar,Jahangirabad,Apple,Delicious,Medium,7800,8000,7900,13 Feb 2025
+340,Bulandshahar,Jahangirabad,Apple,Delicious,Medium,7820,8030,7925,20 Feb 2025
+341,Bulandshahar,Jahangirabad,Apple,Delicious,Medium,7840,8050,7945,17 Feb 2025
+342,Bulandshahar,Jahangirabad,Apple,Delicious,Medium,7848,8052,7950,16 Feb 2025
+343,Bulandshahar,Jahangirabad,Apple,Delicious,Medium,7850,8060,7955,18 Feb 2025
+344,Bulandshahar,Jahangirabad,Apple,Delicious,Medium,7860,8050,7955,15 Feb 2025
+345,Bulandshahar,Jahangirabad,Apple,Delicious,Medium,7860,8070,7965,19 Feb 2025
+346,Jalaun (Orai),Jalaun,Apple,Apple,Medium,8000,9000,8500,16 Feb 2025
+347,Etawah,Jasvantnagar,Apple,Apple,Medium,7460,7560,7510,15 Feb 2025
+348,Etawah,Jasvantnagar,Apple,Apple,Medium,7460,7560,7510,17 Feb 2025
+349,Etawah,Jasvantnagar,Apple,Apple,Medium,7510,7610,7560,13 Feb 2025
+350,Etawah,Jasvantnagar,Apple,Apple,Medium,7510,7610,7560,14 Feb 2025
+351,Etawah,Jasvantnagar,Apple,Apple,Medium,7510,7610,7560,18 Feb 2025
+352,Etawah,Jasvantnagar,Apple,Apple,Medium,7510,7610,7560,19 Feb 2025
+353,Jaunpur,Jaunpur,Apple,Red June,Medium,8150,8350,8250,13 Feb 2025
+354,Jaunpur,Jaunpur,Apple,Red June,Medium,8200,8400,8300,14 Feb 2025
+355,Jaunpur,Jaunpur,Apple,Red June,Medium,8200,8400,8300,15 Feb 2025
+356,Jaunpur,Jaunpur,Apple,Red June,Medium,8250,8450,8350,17 Feb 2025
+357,Jaunpur,Jaunpur,Apple,Red June,Medium,8350,8450,8400,20 Feb 2025
+358,Jaunpur,Jaunpur,Apple,Red June,Medium,8400,8500,8450,19 Feb 2025
+359,Raebarelli,Jayas,Apple,Delicious,Medium,8000,8200,8120,17 Feb 2025
+360,Raebarelli,Jayas,Apple,Delicious,Medium,8000,8200,8120,18 Feb 2025
+361,Raebarelli,Jayas,Apple,Delicious,Medium,8000,8200,8120,20 Feb 2025
+362,Raebarelli,Jayas,Apple,Delicious,Medium,8000,8250,8100,13 Feb 2025
+363,Raebarelli,Jayas,Apple,Delicious,Medium,8100,8150,8120,14 Feb 2025
+364,Raebarelli,Jayas,Apple,Delicious,Medium,8100,8150,8130,19 Feb 2025
+365,Raebarelli,Jayas,Apple,Delicious,Medium,8100,8200,8150,15 Feb 2025
+366,Raebarelli,Jayas,Apple,Delicious,Medium,8100,8250,8150,16 Feb 2025
+367,Jhansi,Jhansi,Apple,Apple,Medium,7800,8100,8000,15 Feb 2025
+368,Jhansi,Jhansi,Apple,Apple,Medium,7800,8100,8050,19 Feb 2025
+369,Jhansi,Jhansi,Apple,Apple,Medium,7800,8150,8060,14 Feb 2025
+370,Jhansi,Jhansi,Apple,Apple,Medium,8100,8300,8200,18 Feb 2025
+371,Shamli,Kairana,Apple,Delicious,Medium,2900,3000,2950,13 Feb 2025
+372,Shamli,Kairana,Apple,Delicious,Medium,3100,3200,3150,17 Feb 2025
+373,Shamli,Kairana,Apple,Delicious,Medium,3300,3400,3350,15 Feb 2025
+374,Shamli,Kairana,Apple,Delicious,Medium,3300,3400,3350,18 Feb 2025
+375,Shamli,Kairana,Apple,Delicious,Medium,3300,3400,3350,20 Feb 2025
+376,Shamli,Kairana,Apple,Delicious,Medium,3500,3600,3550,14 Feb 2025
+377,Kannuj,Kannauj,Apple,Delicious,Medium,7550,7650,7600,13 Feb 2025
+378,Kannuj,Kannauj,Apple,Delicious,Medium,7600,7700,7650,14 Feb 2025
+379,Kannuj,Kannauj,Apple,Delicious,Medium,7600,7700,7650,15 Feb 2025
+380,Kannuj,Kannauj,Apple,Delicious,Medium,7600,7700,7650,16 Feb 2025
+381,Kannuj,Kannauj,Apple,Delicious,Medium,7700,7800,7750,17 Feb 2025
+382,Kannuj,Kannauj,Apple,Delicious,Medium,7700,7800,7750,19 Feb 2025
+383,Kannuj,Kannauj,Apple,Delicious,Medium,7700,7800,7750,20 Feb 2025
+384,Kanpur,Kanpur(Grain),Apple,Delicious,Medium,7630,7830,7730,17 Feb 2025
+385,Kanpur,Kanpur(Grain),Apple,Delicious,Medium,7650,7800,7750,15 Feb 2025
+386,Kanpur,Kanpur(Grain),Apple,Delicious,Medium,7660,7860,7760,19 Feb 2025
+387,Kanpur,Kanpur(Grain),Apple,Delicious,Medium,7700,7900,7800,13 Feb 2025
+388,Kanpur,Kanpur(Grain),Apple,Delicious,Medium,7700,7900,7800,18 Feb 2025
+389,Kanpur,Kanpur(Grain),Apple,Delicious,Medium,7700,7900,7800,20 Feb 2025
+390,Kanpur,Kanpur(Grain),Apple,Delicious,Medium,7710,7910,7810,14 Feb 2025
+391,Kasganj,Kasganj,Apple,Kasmir/Shimla - II,Medium,8050,8600,8250,14 Feb 2025
+392,Kasganj,Kasganj,Apple,Kasmir/Shimla - II,Medium,8050,8600,8260,15 Feb 2025
+393,Kasganj,Kasganj,Apple,Kasmir/Shimla - II,Medium,8050,8600,8260,16 Feb 2025
+394,Kasganj,Kasganj,Apple,Kasmir/Shimla - II,Medium,8050,8600,8265,18 Feb 2025
+395,Kasganj,Kasganj,Apple,Kasmir/Shimla - II,Medium,8060,8610,8270,19 Feb 2025
+396,Kasganj,Kasganj,Apple,Kasmir/Shimla - II,Medium,8100,8620,8275,20 Feb 2025
+397,Farukhabad,Kayamganj,Apple,Delicious,Medium,7700,7800,7750,13 Feb 2025
+398,Farukhabad,Kayamganj,Apple,Delicious,Medium,7750,7850,7800,14 Feb 2025
+399,Farukhabad,Kayamganj,Apple,Delicious,Medium,7750,7850,7800,18 Feb 2025
+400,Farukhabad,Kayamganj,Apple,Delicious,Medium,7770,7880,7830,19 Feb 2025
+401,Farukhabad,Kayamganj,Apple,Delicious,Medium,7800,7900,7850,15 Feb 2025
+402,Farukhabad,Kayamganj,Apple,Delicious,Medium,7800,7900,7850,20 Feb 2025
+403,Farukhabad,Kayamganj,Apple,Delicious,Medium,7830,7930,7880,17 Feb 2025
+404,Fatehpur,Khaga,Apple,Kasmir/Shimla - II,Medium,8125,8300,8200,17 Feb 2025
+405,Fatehpur,Khaga,Apple,Kasmir/Shimla - II,Medium,8125,8300,8200,19 Feb 2025
+406,Fatehpur,Khaga,Apple,Kasmir/Shimla - II,Medium,8150,8285,8230,18 Feb 2025
+407,Aligarh,Khair,Apple,Delicious,Medium,3500,4500,4000,13 Feb 2025
+408,Aligarh,Khair,Apple,Delicious,Medium,3500,5000,4500,20 Feb 2025
+409,Aligarh,Khair,Apple,Delicious,Medium,4000,4500,4200,16 Feb 2025
+410,Aligarh,Khair,Apple,Delicious,Medium,4000,4600,4500,17 Feb 2025
+411,Aligarh,Khair,Apple,Delicious,Medium,4000,5000,4500,14 Feb 2025
+412,Aligarh,Khair,Apple,Delicious,Medium,4000,5000,4500,15 Feb 2025
+413,Aligarh,Khair,Apple,Delicious,Medium,4000,5000,4500,19 Feb 2025
+414,Aligarh,Khair,Apple,Delicious,Medium,4200,5000,4500,18 Feb 2025
+415,Shamli,Khandhla,Apple,Delicious,Medium,4100,4200,4150,13 Feb 2025
+416,Shamli,Khandhla,Apple,Delicious,Medium,4900,5000,4950,14 Feb 2025
+417,Shamli,Khandhla,Apple,Delicious,Medium,4900,5000,4950,17 Feb 2025
+418,Muzaffarnagar,Khatauli,Apple,Apple,Medium,4500,5500,5000,15 Feb 2025
+419,Muzaffarnagar,Khatauli,Apple,Apple,Medium,4500,5500,5000,16 Feb 2025
+420,Muzaffarnagar,Khatauli,Apple,Apple,Medium,4500,5500,5000,17 Feb 2025
+421,Muzaffarnagar,Khatauli,Apple,Apple,Medium,4500,5500,5000,18 Feb 2025
+422,Muzaffarnagar,Khatauli,Apple,Apple,Medium,4500,5500,5000,19 Feb 2025
+423,Muzaffarnagar,Khatauli,Apple,Apple,Medium,4500,5500,5000,20 Feb 2025
+424,Bulandshahar,Khurja,Apple,Delicious,Medium,7700,8100,7900,14 Feb 2025
+425,Bulandshahar,Khurja,Apple,Delicious,Medium,7750,8150,7950,15 Feb 2025
+426,Bulandshahar,Khurja,Apple,Delicious,Medium,7750,8150,7950,17 Feb 2025
+427,Bulandshahar,Khurja,Apple,Delicious,Medium,7750,8150,7950,18 Feb 2025
+428,Bulandshahar,Khurja,Apple,Delicious,Medium,7750,8150,7950,19 Feb 2025
+429,Bulandshahar,Khurja,Apple,Delicious,Medium,7750,8150,7950,20 Feb 2025
+430,Bulandshahar,Khurja,Apple,Delicious,Medium,7800,8200,8000,13 Feb 2025
+431,Bijnor,Kiratpur,Apple,Apple,Medium,6500,6600,6550,15 Feb 2025
+432,Bijnor,Kiratpur,Apple,Apple,Medium,6500,6700,6600,13 Feb 2025
+433,Bijnor,Kiratpur,Apple,Apple,Medium,6600,6700,6650,14 Feb 2025
+434,Bijnor,Kiratpur,Apple,Apple,Medium,6700,6800,6750,16 Feb 2025
+435,Bijnor,Kiratpur,Apple,Apple,Medium,6800,6900,6850,17 Feb 2025
+436,Bijnor,Kiratpur,Apple,Apple,Medium,6800,6900,6850,18 Feb 2025
+437,Bijnor,Kiratpur,Apple,Apple,Medium,7000,7100,7050,19 Feb 2025
+438,Bijnor,Kiratpur,Apple,Apple,Medium,7000,8000,7050,20 Feb 2025
+439,Mau(Maunathbhanjan),Kopaganj,Apple,Delicious,Medium,7000,7200,7100,13 Feb 2025
+440,Mau(Maunathbhanjan),Kopaganj,Apple,Delicious,Medium,7000,7200,7100,17 Feb 2025
+441,Mau(Maunathbhanjan),Kopaganj,Apple,Delicious,Medium,7100,7300,7200,15 Feb 2025
+442,Mau(Maunathbhanjan),Kopaganj,Apple,Delicious,Medium,7100,7300,7200,18 Feb 2025
+443,Mau(Maunathbhanjan),Kopaganj,Apple,Delicious,Medium,7200,7400,7300,20 Feb 2025
+444,Mau(Maunathbhanjan),Kopaganj,Apple,Delicious,Medium,7200,7500,7300,19 Feb 2025
+445,Mau(Maunathbhanjan),Kopaganj,Apple,Delicious,Medium,8100,8300,8200,14 Feb 2025
+446,Mathura,Kosikalan,Apple,Kasmir/Shimla - II,Medium,8200,8300,8250,17 Feb 2025
+447,Mathura,Kosikalan,Apple,Kasmir/Shimla - II,Medium,8200,8350,8300,13 Feb 2025
+448,Mathura,Kosikalan,Apple,Kasmir/Shimla - II,Medium,8200,8400,8300,15 Feb 2025
+449,Mathura,Kosikalan,Apple,Kasmir/Shimla - II,Medium,8250,8330,8290,14 Feb 2025
+450,Mathura,Kosikalan,Apple,Kasmir/Shimla - II,Medium,8300,8400,8350,19 Feb 2025
+451,Mathura,Kosikalan,Apple,Kasmir/Shimla - II,Medium,8300,8500,8400,18 Feb 2025
+452,Mathura,Kosikalan,Apple,Kasmir/Shimla - II,Medium,8300,8500,8400,20 Feb 2025
+453,Lakhimpur,Lakhimpur,Apple,Simla,Medium,7750,7890,7840,18 Feb 2025
+454,Lakhimpur,Lakhimpur,Apple,Simla,Medium,7750,7920,7850,13 Feb 2025
+455,Lakhimpur,Lakhimpur,Apple,Simla,Medium,7760,7900,7850,17 Feb 2025
+456,Lakhimpur,Lakhimpur,Apple,Simla,Medium,7760,7920,7850,19 Feb 2025
+457,Lakhimpur,Lakhimpur,Apple,Simla,Medium,7770,7940,7880,14 Feb 2025
+458,Lakhimpur,Lakhimpur,Apple,Simla,Medium,7800,7910,7860,20 Feb 2025
+459,Lakhimpur,Lakhimpur,Apple,Simla,Medium,7800,7920,7870,15 Feb 2025
+460,Lalitpur,Lalitpur,Apple,Kasmir/Shimla - II,Medium,7280,7500,7460,13 Feb 2025
+461,Lalitpur,Lalitpur,Apple,Kasmir/Shimla - II,Medium,7320,7380,7350,18 Feb 2025
+462,Lalitpur,Lalitpur,Apple,Kasmir/Shimla - II,Medium,7330,7400,7360,17 Feb 2025
+463,Lalitpur,Lalitpur,Apple,Kasmir/Shimla - II,Medium,7350,7450,7400,19 Feb 2025
+464,Lalitpur,Lalitpur,Apple,Kasmir/Shimla - II,Medium,7370,7430,7400,15 Feb 2025
+465,Lalitpur,Lalitpur,Apple,Kasmir/Shimla - II,Medium,7370,7430,7400,16 Feb 2025
+466,Lalitpur,Lalitpur,Apple,Kasmir/Shimla - II,Medium,7370,7430,7400,20 Feb 2025
+467,Lalitpur,Lalitpur,Apple,Kasmir/Shimla - II,Medium,7400,7500,7450,14 Feb 2025
+468,Lucknow,Lucknow,Apple,Kasmir/Shimla - II,Medium,7560,7760,7660,17 Feb 2025
+469,Lucknow,Lucknow,Apple,Kasmir/Shimla - II,Medium,7560,7760,7660,18 Feb 2025
+470,Lucknow,Lucknow,Apple,Kasmir/Shimla - II,Medium,7560,7760,7660,19 Feb 2025
+471,Lucknow,Lucknow,Apple,Kasmir/Shimla - II,Medium,7600,7800,7700,20 Feb 2025
+472,Lucknow,Lucknow,Apple,Kasmir/Shimla - II,Medium,7700,7900,7800,13 Feb 2025
+473,Lucknow,Lucknow,Apple,Kasmir/Shimla - II,Medium,7700,7900,7800,14 Feb 2025
+474,Lucknow,Lucknow,Apple,Kasmir/Shimla - II,Medium,7700,7900,7800,15 Feb 2025
+475,Hardoi,Madhoganj,Apple,Kasmir/Shimla - II,Medium,7800,7900,7850,13 Feb 2025
+476,Hardoi,Madhoganj,Apple,Kasmir/Shimla - II,Medium,7800,7900,7850,14 Feb 2025
+477,Hardoi,Madhoganj,Apple,Kasmir/Shimla - II,Medium,7800,7900,7850,18 Feb 2025
+478,Hardoi,Madhoganj,Apple,Kasmir/Shimla - II,Medium,7800,7900,7850,20 Feb 2025
+479,Hardoi,Madhoganj,Apple,Kasmir/Shimla - II,Medium,7800,7900,7860,16 Feb 2025
+480,Hardoi,Madhoganj,Apple,Kasmir/Shimla - II,Medium,7800,7900,7860,19 Feb 2025
+481,Hardoi,Madhoganj,Apple,Kasmir/Shimla - II,Medium,7850,7900,7880,17 Feb 2025
+482,Mahoba,Mahoba,Apple,Royal Delicious,Medium,8100,8200,8160,14 Feb 2025
+483,Mahoba,Mahoba,Apple,Royal Delicious,Medium,8100,8220,8150,13 Feb 2025
+484,Mahoba,Mahoba,Apple,Royal Delicious,Medium,8120,8240,8180,15 Feb 2025
+485,Mahoba,Mahoba,Apple,Royal Delicious,Medium,8150,8260,8210,16 Feb 2025
+486,Mahoba,Mahoba,Apple,Royal Delicious,Medium,8180,8290,8220,17 Feb 2025
+487,Mahoba,Mahoba,Apple,Royal Delicious,Medium,8180,8300,8220,20 Feb 2025
+488,Mahoba,Mahoba,Apple,Royal Delicious,Medium,8200,8300,8250,19 Feb 2025
+489,Khiri (Lakhimpur),Maigalganj,Apple,Kasmir/Shimla - II,Medium,9000,9070,9040,16 Feb 2025
+490,Khiri (Lakhimpur),Maigalganj,Apple,Kasmir/Shimla - II,Medium,9000,9070,9040,20 Feb 2025
+491,Khiri (Lakhimpur),Maigalganj,Apple,Kasmir/Shimla - II,Medium,9000,9075,9040,15 Feb 2025
+492,Khiri (Lakhimpur),Maigalganj,Apple,Kasmir/Shimla - II,Medium,9000,9080,9040,18 Feb 2025
+493,Khiri (Lakhimpur),Maigalganj,Apple,Kasmir/Shimla - II,Medium,9100,9160,9130,19 Feb 2025
+494,Khiri (Lakhimpur),Maigalganj,Apple,Kasmir/Shimla - II,Medium,9100,9165,9140,13 Feb 2025
+495,Khiri (Lakhimpur),Maigalganj,Apple,Kasmir/Shimla - II,Medium,9100,9180,9140,17 Feb 2025
+496,Khiri (Lakhimpur),Maigalganj,Apple,Kasmir/Shimla - II,Medium,9120,9170,9140,14 Feb 2025
+497,Mainpuri,Mainpuri,Apple,Delicious,Medium,8120,8315,8215,13 Feb 2025
+498,Mainpuri,Mainpuri,Apple,Delicious,Medium,8135,8325,8245,19 Feb 2025
+499,Mainpuri,Mainpuri,Apple,Delicious,Medium,8155,8345,8265,20 Feb 2025
+500,Mainpuri,Mainpuri,Apple,Delicious,Medium,8175,8365,8285,14 Feb 2025
+501,Mainpuri,Mainpuri,Apple,Delicious,Medium,8180,8370,8290,18 Feb 2025
+502,Mainpuri,Mainpuri,Apple,Delicious,Medium,8215,8410,8320,17 Feb 2025
+503,Kaushambi,Manjhanpur,Apple,Golden,Medium,8110,8315,8200,15 Feb 2025
+504,Kaushambi,Manjhanpur,Apple,Golden,Medium,8120,8325,8210,14 Feb 2025
+505,Kaushambi,Manjhanpur,Apple,Golden,Medium,8125,8330,8220,17 Feb 2025
+506,Kaushambi,Manjhanpur,Apple,Golden,Medium,8130,8340,8225,19 Feb 2025
+507,Kaushambi,Manjhanpur,Apple,Golden,Medium,8135,8330,8220,13 Feb 2025
+508,Kaushambi,Manjhanpur,Apple,Golden,Medium,8145,8350,8240,20 Feb 2025
+509,Kaushambi,Manjhanpur,Apple,Golden,Medium,8150,8355,8245,18 Feb 2025
+510,Mathura,Mathura,Apple,Delicious,Medium,8000,8600,8300,14 Feb 2025
+511,Mathura,Mathura,Apple,Delicious,Medium,8000,8600,8300,20 Feb 2025
+512,Mathura,Mathura,Apple,Delicious,Medium,8100,8500,8300,13 Feb 2025
+513,Mathura,Mathura,Apple,Delicious,Medium,8100,8600,8400,19 Feb 2025
+514,Mathura,Mathura,Apple,Delicious,Medium,8200,8600,8400,17 Feb 2025
+515,Mathura,Mathura,Apple,Delicious,Medium,8200,8600,8400,18 Feb 2025
+516,Jhansi,Mauranipur,Apple,Kasmir/Shimla - II,Medium,7800,8250,8000,17 Feb 2025
+517,Jhansi,Mauranipur,Apple,Kasmir/Shimla - II,Medium,7800,8300,8000,14 Feb 2025
+518,Jhansi,Mauranipur,Apple,Kasmir/Shimla - II,Medium,7800,8300,8000,15 Feb 2025
+519,Jhansi,Mauranipur,Apple,Kasmir/Shimla - II,Medium,7800,8300,8050,19 Feb 2025
+520,Jhansi,Mauranipur,Apple,Kasmir/Shimla - II,Medium,7800,8300,8080,20 Feb 2025
+521,Jhansi,Mauranipur,Apple,Kasmir/Shimla - II,Medium,7850,8300,8000,16 Feb 2025
+522,Jhansi,Mauranipur,Apple,Kasmir/Shimla - II,Medium,7900,8350,8150,13 Feb 2025
+523,Meerut,Meerut,Apple,Delicious,Medium,7850,8040,7940,14 Feb 2025
+524,Meerut,Meerut,Apple,Delicious,Medium,7870,8030,7950,13 Feb 2025
+525,Meerut,Meerut,Apple,Delicious,Medium,7870,8040,7950,15 Feb 2025
+526,Meerut,Meerut,Apple,Delicious,Medium,7870,8040,7960,18 Feb 2025
+527,Meerut,Meerut,Apple,Delicious,Medium,7900,8000,7950,17 Feb 2025
+528,Meerut,Meerut,Apple,Delicious,Medium,7900,8060,7970,19 Feb 2025
+529,Sitapur,Mehmoodabad,Apple,Kasmir/Shimla - II,Medium,7780,7900,7840,13 Feb 2025
+530,Sitapur,Mehmoodabad,Apple,Kasmir/Shimla - II,Medium,7780,7900,7840,17 Feb 2025
+531,Sitapur,Mehmoodabad,Apple,Kasmir/Shimla - II,Medium,7790,7910,7860,20 Feb 2025
+532,Sitapur,Mehmoodabad,Apple,Kasmir/Shimla - II,Medium,7800,7910,7850,15 Feb 2025
+533,Sitapur,Mehmoodabad,Apple,Kasmir/Shimla - II,Medium,7800,7910,7850,16 Feb 2025
+534,Sitapur,Mehmoodabad,Apple,Kasmir/Shimla - II,Medium,7800,7910,7850,18 Feb 2025
+535,Sitapur,Mehmoodabad,Apple,Kasmir/Shimla - II,Medium,7800,7920,7860,19 Feb 2025
+536,Mirzapur,Mirzapur,Apple,Delicious,Medium,8125,8225,8185,13 Feb 2025
+537,Mirzapur,Mirzapur,Apple,Delicious,Medium,8270,8350,8315,20 Feb 2025
+538,Mirzapur,Mirzapur,Apple,Delicious,Medium,8300,8375,8345,14 Feb 2025
+539,Mirzapur,Mirzapur,Apple,Delicious,Medium,8300,8400,8350,15 Feb 2025
+540,Mirzapur,Mirzapur,Apple,Delicious,Medium,8300,8400,8360,19 Feb 2025
+541,Mirzapur,Mirzapur,Apple,Delicious,Medium,8300,8400,8365,17 Feb 2025
+542,Mirzapur,Mirzapur,Apple,Delicious,Medium,8325,8400,8375,18 Feb 2025
+543,Farukhabad,Mohamadabad,Apple,Apple,Medium,7750,7950,7850,14 Feb 2025
+544,Farukhabad,Mohamadabad,Apple,Apple,Medium,7800,8000,7900,15 Feb 2025
+545,Farukhabad,Mohamadabad,Apple,Apple,Medium,7850,8050,7950,13 Feb 2025
+546,Farukhabad,Mohamadabad,Apple,Apple,Medium,7850,8050,7950,16 Feb 2025
+547,Farukhabad,Mohamadabad,Apple,Apple,Medium,7860,8060,7960,19 Feb 2025
+548,Farukhabad,Mohamadabad,Apple,Apple,Medium,7950,8150,8050,17 Feb 2025
+549,Farukhabad,Mohamadabad,Apple,Apple,Medium,8080,8280,8180,20 Feb 2025
+550,Khiri (Lakhimpur),Mohammdi,Apple,Delicious,Medium,7800,7900,7850,13 Feb 2025
+551,Khiri (Lakhimpur),Mohammdi,Apple,Delicious,Medium,7800,7900,7855,19 Feb 2025
+552,Khiri (Lakhimpur),Mohammdi,Apple,Delicious,Medium,7810,7915,7860,17 Feb 2025
+553,Khiri (Lakhimpur),Mohammdi,Apple,Delicious,Medium,7810,7915,7865,20 Feb 2025
+554,Khiri (Lakhimpur),Mohammdi,Apple,Delicious,Medium,7815,7915,7865,18 Feb 2025
+555,Khiri (Lakhimpur),Mohammdi,Apple,Delicious,Medium,7840,7940,7885,15 Feb 2025
+556,Khiri (Lakhimpur),Mohammdi,Apple,Delicious,Medium,7860,7960,7910,14 Feb 2025
+557,Jaunpur,Mugrabaadshahpur,Apple,Delicious,Medium,8120,8320,8220,13 Feb 2025
+558,Jaunpur,Mugrabaadshahpur,Apple,Delicious,Medium,8180,8380,8280,14 Feb 2025
+559,Jaunpur,Mugrabaadshahpur,Apple,Delicious,Medium,8210,8410,8310,15 Feb 2025
+560,Jaunpur,Mugrabaadshahpur,Apple,Delicious,Medium,8220,8420,8320,17 Feb 2025
+561,Jaunpur,Mugrabaadshahpur,Apple,Delicious,Medium,8260,8460,8360,18 Feb 2025
+562,Jaunpur,Mugrabaadshahpur,Apple,Delicious,Medium,8270,8470,8370,20 Feb 2025
+563,Jaunpur,Mugrabaadshahpur,Apple,Delicious,Medium,8275,8475,8375,19 Feb 2025
+564,Sambhal,Muradabad,Apple,Delicious,Medium,7800,7900,7840,13 Feb 2025
+565,Sambhal,Muradabad,Apple,Delicious,Medium,7800,7900,7850,14 Feb 2025
+566,Sambhal,Muradabad,Apple,Delicious,Medium,7800,7900,7850,16 Feb 2025
+567,Sambhal,Muradabad,Apple,Delicious,Medium,7800,7900,7860,17 Feb 2025
+568,Sambhal,Muradabad,Apple,Delicious,Medium,7820,7900,7860,15 Feb 2025
+569,Sambhal,Muradabad,Apple,Delicious,Medium,7840,7960,7880,18 Feb 2025
+570,Sambhal,Muradabad,Apple,Delicious,Medium,7850,8000,7900,19 Feb 2025
+571,Muzaffarnagar,Muzzafarnagar,Apple,Kasmir/Shimla - II,Medium,7800,8200,8000,15 Feb 2025
+572,Muzaffarnagar,Muzzafarnagar,Apple,Kasmir/Shimla - II,Medium,7800,8200,8050,13 Feb 2025
+573,Muzaffarnagar,Muzzafarnagar,Apple,Kasmir/Shimla - II,Medium,7800,8300,8100,14 Feb 2025
+574,Muzaffarnagar,Muzzafarnagar,Apple,Kasmir/Shimla - II,Medium,7800,8300,8100,18 Feb 2025
+575,Muzaffarnagar,Muzzafarnagar,Apple,Kasmir/Shimla - II,Medium,7900,8300,8100,16 Feb 2025
+576,Muzaffarnagar,Muzzafarnagar,Apple,Kasmir/Shimla - II,Medium,8000,8300,8100,17 Feb 2025
+577,Muzaffarnagar,Muzzafarnagar,Apple,Kasmir/Shimla - II,Medium,8000,8300,8100,19 Feb 2025
+578,Muzaffarnagar,Muzzafarnagar,Apple,Kasmir/Shimla - II,Medium,8000,8400,8200,20 Feb 2025
+579,Bahraich,Naanpara,Apple,Royal Delicious,Medium,6000,6200,6100,14 Feb 2025
+580,Bahraich,Naanpara,Apple,Royal Delicious,Medium,6000,6300,6200,13 Feb 2025
+581,Bahraich,Naanpara,Apple,Royal Delicious,Medium,6000,6400,6200,17 Feb 2025
+582,Bahraich,Naanpara,Apple,Royal Delicious,Medium,6000,6400,6200,19 Feb 2025
+583,Bahraich,Naanpara,Apple,Royal Delicious,Medium,6000,6400,6200,20 Feb 2025
+584,Bahraich,Naanpara,Apple,Royal Delicious,Medium,6000,6500,6200,18 Feb 2025
+585,Bijnor,Nagina,Apple,Delicious,Medium,7000,12000,9000,14 Feb 2025
+586,Bijnor,Nagina,Apple,Delicious,Medium,7000,13000,10000,18 Feb 2025
+587,Bijnor,Nagina,Apple,Delicious,Medium,7000,13000,11000,16 Feb 2025
+588,Bijnor,Nagina,Apple,Delicious,Medium,7000,13000,12000,15 Feb 2025
+589,Bijnor,Nagina,Apple,Delicious,Medium,7000,14000,10000,13 Feb 2025
+590,Bijnor,Nagina,Apple,Delicious,Medium,8000,13000,11000,17 Feb 2025
+591,Siddharth Nagar,Naugarh,Apple,Delicious,Medium,7840,7890,7850,18 Feb 2025
+592,Siddharth Nagar,Naugarh,Apple,Delicious,Medium,8110,8160,8150,13 Feb 2025
+593,Siddharth Nagar,Naugarh,Apple,Delicious,Medium,8110,8160,8150,15 Feb 2025
+594,Siddharth Nagar,Naugarh,Apple,Delicious,Medium,8120,8160,8150,14 Feb 2025
+595,Siddharth Nagar,Naugarh,Apple,Delicious,Medium,8140,8250,8200,17 Feb 2025
+596,Siddharth Nagar,Naugarh,Apple,Delicious,Medium,8240,8260,8250,16 Feb 2025
+597,Maharajganj,Nautnava,Apple,Delicious,Medium,8200,8400,8350,14 Feb 2025
+598,Maharajganj,Nautnava,Apple,Delicious,Medium,8260,8400,8355,13 Feb 2025
+599,Gonda,Nawabganj,Apple,Delicious,Medium,8350,8550,8450,18 Feb 2025
+600,Gonda,Nawabganj,Apple,Delicious,Medium,8350,8550,8450,19 Feb 2025
+601,Gonda,Nawabganj,Apple,Delicious,Medium,8400,8600,8500,13 Feb 2025
+602,Gonda,Nawabganj,Apple,Delicious,Medium,8400,8600,8500,16 Feb 2025
+603,Gonda,Nawabganj,Apple,Delicious,Medium,8400,8600,8500,17 Feb 2025
+604,Gonda,Nawabganj,Apple,Delicious,Medium,8400,8600,8500,20 Feb 2025
+605,Gonda,Nawabganj,Apple,Delicious,Medium,8500,8700,8600,14 Feb 2025
+606,Gonda,Nawabganj,Apple,Delicious,Medium,8500,8700,8600,15 Feb 2025
+607,Ghaziabad,Noida,Apple,Delicious,Medium,7790,7980,7880,15 Feb 2025
+608,Ghaziabad,Noida,Apple,Delicious,Medium,7850,8050,7950,17 Feb 2025
+609,Ghaziabad,Noida,Apple,Delicious,Medium,7855,8050,7955,18 Feb 2025
+610,Ghaziabad,Noida,Apple,Delicious,Medium,7860,8060,7960,19 Feb 2025
+611,Ghaziabad,Noida,Apple,Delicious,Medium,7860,8060,7960,20 Feb 2025
+612,Ghaziabad,Noida,Apple,Delicious,Medium,7890,8080,7990,14 Feb 2025
+613,Ghaziabad,Noida,Apple,Delicious,Medium,7910,8100,8000,13 Feb 2025
+614,Jalaun (Orai),Orai,Apple,Delicious,Medium,7400,8200,7800,14 Feb 2025
+615,Jalaun (Orai),Orai,Apple,Delicious,Medium,7500,8000,7800,13 Feb 2025
+616,Jalaun (Orai),Orai,Apple,Delicious,Medium,7700,8200,8000,16 Feb 2025
+617,Jalaun (Orai),Orai,Apple,Delicious,Medium,7700,8200,8000,19 Feb 2025
+618,Jalaun (Orai),Orai,Apple,Delicious,Medium,7700,8300,8000,15 Feb 2025
+619,Jalaun (Orai),Orai,Apple,Delicious,Medium,7700,8300,8000,17 Feb 2025
+620,Jalaun (Orai),Orai,Apple,Delicious,Medium,7800,8300,8100,20 Feb 2025
+621,Maharajganj,Partaval,Apple,Delicious,Medium,8125,8275,8200,14 Feb 2025
+622,Pillibhit,Pilibhit,Apple,Delicious,Medium,7640,7720,7680,13 Feb 2025
+623,Pillibhit,Pilibhit,Apple,Delicious,Medium,7640,7720,7685,14 Feb 2025
+624,Pillibhit,Pilibhit,Apple,Delicious,Medium,7640,7720,7685,16 Feb 2025
+625,Pillibhit,Pilibhit,Apple,Delicious,Medium,7650,7740,7690,15 Feb 2025
+626,Pillibhit,Pilibhit,Apple,Delicious,Medium,7720,7800,7760,17 Feb 2025
+627,Pillibhit,Pilibhit,Apple,Delicious,Medium,7725,7820,7765,18 Feb 2025
+628,Pillibhit,Pilibhit,Apple,Delicious,Medium,7730,7820,7770,19 Feb 2025
+629,Pillibhit,Pilibhit,Apple,Delicious,Medium,7800,7900,7850,20 Feb 2025
+630,Pratapgarh,Pratapgarh,Apple,Delicious,Medium,8000,8250,8100,13 Feb 2025
+631,Pratapgarh,Pratapgarh,Apple,Delicious,Medium,8000,8300,8200,18 Feb 2025
+632,Pratapgarh,Pratapgarh,Apple,Delicious,Medium,8100,8300,8150,14 Feb 2025
+633,Pratapgarh,Pratapgarh,Apple,Delicious,Medium,8100,8300,8170,15 Feb 2025
+634,Pratapgarh,Pratapgarh,Apple,Delicious,Medium,8100,8300,8180,16 Feb 2025
+635,Pratapgarh,Pratapgarh,Apple,Delicious,Medium,8100,8300,8190,17 Feb 2025
+636,Pratapgarh,Pratapgarh,Apple,Delicious,Medium,8100,8350,8225,19 Feb 2025
+637,Pratapgarh,Pratapgarh,Apple,Delicious,Medium,8100,8400,8220,20 Feb 2025
+638,Kanpur Dehat,Pukharayan,Apple,Delicious,Medium,7380,7415,7400,16 Feb 2025
+639,Kanpur Dehat,Pukharayan,Apple,Delicious,Medium,7385,7425,7400,13 Feb 2025
+640,Kanpur Dehat,Pukharayan,Apple,Delicious,Medium,7400,7425,7410,14 Feb 2025
+641,Kanpur Dehat,Pukharayan,Apple,Delicious,Medium,7400,7430,7415,15 Feb 2025
+642,Kanpur Dehat,Pukharayan,Apple,Delicious,Medium,7410,7435,7425,18 Feb 2025
+643,Kanpur Dehat,Pukharayan,Apple,Delicious,Medium,7425,7450,7435,19 Feb 2025
+644,Pillibhit,Puranpur,Apple,Delicious,Medium,7620,7720,7675,13 Feb 2025
+645,Pillibhit,Puranpur,Apple,Delicious,Medium,7635,7730,7685,15 Feb 2025
+646,Pillibhit,Puranpur,Apple,Delicious,Medium,7640,7720,7680,14 Feb 2025
+647,Pillibhit,Puranpur,Apple,Delicious,Medium,7642,7720,7682,16 Feb 2025
+648,Pillibhit,Puranpur,Apple,Delicious,Medium,7720,7795,7755,17 Feb 2025
+649,Pillibhit,Puranpur,Apple,Delicious,Medium,7720,7800,7760,18 Feb 2025
+650,Pillibhit,Puranpur,Apple,Delicious,Medium,7725,7800,7765,19 Feb 2025
+651,Pillibhit,Puranpur,Apple,Delicious,Medium,7800,7890,7845,20 Feb 2025
+652,Unnao,Purwa,Apple,Kasmir/Shimla - II,Medium,7875,8000,7925,13 Feb 2025
+653,Unnao,Purwa,Apple,Kasmir/Shimla - II,Medium,7875,8000,7925,14 Feb 2025
+654,Unnao,Purwa,Apple,Kasmir/Shimla - II,Medium,7875,8000,7925,15 Feb 2025
+655,Unnao,Purwa,Apple,Kasmir/Shimla - II,Medium,7900,8050,7950,16 Feb 2025
+656,Unnao,Purwa,Apple,Kasmir/Shimla - II,Medium,7900,8050,7950,17 Feb 2025
+657,Unnao,Purwa,Apple,Kasmir/Shimla - II,Medium,7900,8050,7950,18 Feb 2025
+658,Unnao,Purwa,Apple,Kasmir/Shimla - II,Medium,7900,8050,7950,20 Feb 2025
+659,Shahjahanpur,Puwaha,Apple,Delicious,Medium,7600,7800,7700,14 Feb 2025
+660,Raebarelli,Raibareilly,Apple,Kasmir/Shimla - II,Medium,7800,7900,7820,13 Feb 2025
+661,Raebarelli,Raibareilly,Apple,Kasmir/Shimla - II,Medium,7800,7900,7850,14 Feb 2025
+662,Raebarelli,Raibareilly,Apple,Kasmir/Shimla - II,Medium,7850,7950,7900,15 Feb 2025
+663,Raebarelli,Raibareilly,Apple,Kasmir/Shimla - II,Medium,7850,7950,7900,17 Feb 2025
+664,Raebarelli,Raibareilly,Apple,Kasmir/Shimla - II,Medium,7900,7950,7920,16 Feb 2025
+665,Raebarelli,Raibareilly,Apple,Kasmir/Shimla - II,Medium,7900,8000,7950,18 Feb 2025
+666,Raebarelli,Raibareilly,Apple,Kasmir/Shimla - II,Medium,7900,8000,7950,19 Feb 2025
+667,Raebarelli,Raibareilly,Apple,Kasmir/Shimla - II,Medium,7950,8000,7975,20 Feb 2025
+668,Rampur,Rampur,Apple,Delicious,Medium,6950,7050,7000,20 Feb 2025
+669,Rampur,Rampur,Apple,Delicious,Medium,7800,7900,7850,14 Feb 2025
+670,Rampur,Rampur,Apple,Delicious,Medium,7800,7900,7860,16 Feb 2025
+671,Rampur,Rampur,Apple,Delicious,Medium,7800,7900,7860,17 Feb 2025
+672,Rampur,Rampur,Apple,Delicious,Medium,7810,7910,7850,13 Feb 2025
+673,Rampur,Rampur,Apple,Delicious,Medium,7820,7920,7860,18 Feb 2025
+674,Rampur,Rampur,Apple,Delicious,Medium,7820,7920,7860,19 Feb 2025
+675,Saharanpur,Rampurmaniharan,Apple,Kasmir/Shimla - II,Medium,5100,5300,5200,17 Feb 2025
+676,Saharanpur,Rampurmaniharan,Apple,Kasmir/Shimla - II,Medium,5800,5900,5850,14 Feb 2025
+677,Ballia,Rasda,Apple,American,Medium,8080,8200,8145,15 Feb 2025
+678,Ballia,Rasda,Apple,American,Medium,8080,8225,8150,14 Feb 2025
+679,Ballia,Rasda,Apple,American,Medium,8100,8225,8165,13 Feb 2025
+680,Bareilly,Richha,Apple,Apple,Medium,4125,4185,4150,18 Feb 2025
+681,Bareilly,Richha,Apple,Apple,Medium,4160,4220,4185,19 Feb 2025
+682,Bareilly,Richha,Apple,Apple,Medium,4160,4240,4190,20 Feb 2025
+683,Bareilly,Richha,Apple,Apple,Medium,4200,4255,4230,17 Feb 2025
+684,Bareilly,Richha,Apple,Apple,Medium,4210,4260,4235,15 Feb 2025
+685,Bareilly,Richha,Apple,Apple,Medium,4215,4250,4230,14 Feb 2025
+686,Bareilly,Richha,Apple,Apple,Medium,4220,4265,4240,16 Feb 2025
+687,Sonbhadra,Robertsganj,Apple,Delicious,Medium,8100,8340,8220,13 Feb 2025
+688,Sonbhadra,Robertsganj,Apple,Delicious,Medium,8120,8350,8235,14 Feb 2025
+689,Sonbhadra,Robertsganj,Apple,Delicious,Medium,8120,8375,8250,15 Feb 2025
+690,Sonbhadra,Robertsganj,Apple,Delicious,Medium,8150,8370,8265,16 Feb 2025
+691,Sonbhadra,Robertsganj,Apple,Delicious,Medium,8230,8475,8350,18 Feb 2025
+692,Sonbhadra,Robertsganj,Apple,Delicious,Medium,8260,8450,8340,17 Feb 2025
+693,Ayodhya,Rudauli,Apple,Kasmir/Shimla - II,Medium,6000,7000,6800,18 Feb 2025
+694,Ayodhya,Rudauli,Apple,Kasmir/Shimla - II,Medium,6000,7500,6800,16 Feb 2025
+695,Ayodhya,Rudauli,Apple,Kasmir/Shimla - II,Medium,6000,7500,6800,17 Feb 2025
+696,Ayodhya,Rudauli,Apple,Kasmir/Shimla - II,Medium,6300,6900,6500,20 Feb 2025
+697,Barabanki,Safdarganj,Apple,Delicious,Medium,7400,7500,7450,19 Feb 2025
+698,Barabanki,Safdarganj,Apple,Delicious,Medium,7900,7980,7950,13 Feb 2025
+699,Barabanki,Safdarganj,Apple,Delicious,Medium,7900,7980,7950,14 Feb 2025
+700,Barabanki,Safdarganj,Apple,Delicious,Medium,7950,8050,8000,15 Feb 2025
+701,Barabanki,Safdarganj,Apple,Delicious,Medium,8000,8100,8050,18 Feb 2025
+702,Barabanki,Safdarganj,Apple,Delicious,Medium,8000,8100,8050,20 Feb 2025
+703,Barabanki,Safdarganj,Apple,Delicious,Medium,8100,8200,8150,17 Feb 2025
+704,Saharanpur,Saharanpur,Apple,Kasmir/Shimla - II,Medium,7500,8100,7800,13 Feb 2025
+705,Saharanpur,Saharanpur,Apple,Kasmir/Shimla - II,Medium,7700,8300,8000,14 Feb 2025
+706,Saharanpur,Saharanpur,Apple,Kasmir/Shimla - II,Medium,7700,8300,8000,16 Feb 2025
+707,Saharanpur,Saharanpur,Apple,Kasmir/Shimla - II,Medium,7700,8300,8000,17 Feb 2025
+708,Saharanpur,Saharanpur,Apple,Kasmir/Shimla - II,Medium,7800,8600,8200,18 Feb 2025
+709,Saharanpur,Saharanpur,Apple,Kasmir/Shimla - II,Medium,7800,8600,8200,19 Feb 2025
+710,Saharanpur,Saharanpur,Apple,Kasmir/Shimla - II,Medium,7800,8600,8200,20 Feb 2025
+711,Siddharth Nagar,Sahiyapur,Apple,Delicious,Medium,6500,6550,6510,13 Feb 2025
+712,Siddharth Nagar,Sahiyapur,Apple,Delicious,Medium,6500,6600,6510,20 Feb 2025
+713,Siddharth Nagar,Sahiyapur,Apple,Delicious,Medium,6500,6610,6600,19 Feb 2025
+714,Siddharth Nagar,Sahiyapur,Apple,Delicious,Medium,6500,6650,6510,14 Feb 2025
+715,Siddharth Nagar,Sahiyapur,Apple,Delicious,Medium,6500,6680,6650,17 Feb 2025
+716,Siddharth Nagar,Sahiyapur,Apple,Delicious,Medium,6500,6750,6650,18 Feb 2025
+717,Sambhal,Sambhal,Apple,Delicious,Medium,7500,8500,8000,17 Feb 2025
+718,Sambhal,Sambhal,Apple,Delicious,Medium,7500,8550,8000,13 Feb 2025
+719,Sambhal,Sambhal,Apple,Delicious,Medium,8000,9000,8500,15 Feb 2025
+720,Sambhal,Sambhal,Apple,Delicious,Medium,8000,9000,8500,16 Feb 2025
+721,Sambhal,Sambhal,Apple,Delicious,Medium,8000,9000,8500,19 Feb 2025
+722,Sambhal,Sambhal,Apple,Delicious,Medium,8500,9150,9000,14 Feb 2025
+723,Sambhal,Sambhal,Apple,Delicious,Medium,8500,9500,9000,18 Feb 2025
+724,Sambhal,Sambhal,Apple,Delicious,Medium,8500,9500,9000,20 Feb 2025
+725,Hardoi,Sandi,Apple,American,Medium,7800,7900,7850,15 Feb 2025
+726,Hardoi,Sandi,Apple,American,Medium,7800,7950,7850,18 Feb 2025
+727,Hardoi,Sandi,Apple,American,Medium,7800,7950,7850,20 Feb 2025
+728,Hardoi,Sandi,Apple,American,Medium,7800,7950,7860,19 Feb 2025
+729,Hardoi,Sandi,Apple,American,Medium,7800,7950,7870,14 Feb 2025
+730,Hardoi,Sandi,Apple,American,Medium,7800,7950,7870,17 Feb 2025
+731,Hardoi,Sandi,Apple,American,Medium,7800,7950,7880,13 Feb 2025
+732,Hardoi,Sandila,Apple,Kasmir/Shimla - II,Medium,7800,7900,7850,13 Feb 2025
+733,Hardoi,Sandila,Apple,Kasmir/Shimla - II,Medium,7800,7900,7850,15 Feb 2025
+734,Hardoi,Sandila,Apple,Kasmir/Shimla - II,Medium,7810,7900,7860,14 Feb 2025
+735,Hardoi,Sandila,Apple,Kasmir/Shimla - II,Medium,7820,7900,7860,20 Feb 2025
+736,Hardoi,Sandila,Apple,Kasmir/Shimla - II,Medium,7830,7910,7870,16 Feb 2025
+737,Hardoi,Sandila,Apple,Kasmir/Shimla - II,Medium,7830,7920,7870,18 Feb 2025
+738,Hardoi,Sandila,Apple,Kasmir/Shimla - II,Medium,7850,7950,7900,17 Feb 2025
+739,Badaun,Shahaswan,Apple,Other,Medium,6800,7200,7000,15 Feb 2025
+740,Badaun,Shahaswan,Apple,Other,Medium,6800,7200,7000,16 Feb 2025
+741,Badaun,Shahaswan,Apple,Other,Medium,6800,7200,7000,17 Feb 2025
+742,Badaun,Shahaswan,Apple,Other,Medium,6800,7200,7000,18 Feb 2025
+743,Badaun,Shahaswan,Apple,Other,Medium,6800,7200,7000,20 Feb 2025
+744,Badaun,Shahaswan,Apple,Other,Medium,6900,7200,7000,13 Feb 2025
+745,Jaunpur,Shahganj,Apple,Delicious,Medium,8200,8400,8300,14 Feb 2025
+746,Jaunpur,Shahganj,Apple,Delicious,Medium,8200,8400,8300,17 Feb 2025
+747,Jaunpur,Shahganj,Apple,Delicious,Medium,8200,8400,8300,19 Feb 2025
+748,Jaunpur,Shahganj,Apple,Delicious,Medium,8250,8400,8310,13 Feb 2025
+749,Jaunpur,Shahganj,Apple,Delicious,Medium,8250,8400,8310,18 Feb 2025
+750,Jaunpur,Shahganj,Apple,Delicious,Medium,8250,8400,8310,20 Feb 2025
+751,Shahjahanpur,Shahjahanpur,Apple,Simla,Medium,7460,7600,7520,13 Feb 2025
+752,Shahjahanpur,Shahjahanpur,Apple,Simla,Medium,7460,7600,7525,14 Feb 2025
+753,Shahjahanpur,Shahjahanpur,Apple,Simla,Medium,7460,7600,7530,15 Feb 2025
+754,Shahjahanpur,Shahjahanpur,Apple,Simla,Medium,7460,7600,7535,17 Feb 2025
+755,Shahjahanpur,Shahjahanpur,Apple,Simla,Medium,7600,8000,7800,18 Feb 2025
+756,Shahjahanpur,Shahjahanpur,Apple,Simla,Medium,7750,7870,7810,19 Feb 2025
+757,Shahjahanpur,Shahjahanpur,Apple,Simla,Medium,7760,7900,7815,20 Feb 2025
+758,Shamli,Shamli,Apple,Delicious,Medium,7800,8000,7900,14 Feb 2025
+759,Shamli,Shamli,Apple,Delicious,Medium,7800,8000,7900,15 Feb 2025
+760,Shamli,Shamli,Apple,Delicious,Medium,7850,8050,7950,13 Feb 2025
+761,Shamli,Shamli,Apple,Delicious,Medium,7940,8060,8000,18 Feb 2025
+762,Shamli,Shamli,Apple,Delicious,Medium,7950,8050,8000,16 Feb 2025
+763,Shamli,Shamli,Apple,Delicious,Medium,7950,8050,8000,17 Feb 2025
+764,Shamli,Shamli,Apple,Delicious,Medium,8050,8150,8100,19 Feb 2025
+765,Shamli,Shamli,Apple,Delicious,Medium,8050,8150,8100,20 Feb 2025
+766,Sitapur,Sitapur,Apple,Kasmir/Shimla - II,Medium,7650,8000,7840,14 Feb 2025
+767,Sitapur,Sitapur,Apple,Kasmir/Shimla - II,Medium,7650,8000,7850,13 Feb 2025
+768,Sitapur,Sitapur,Apple,Kasmir/Shimla - II,Medium,7650,8000,7850,16 Feb 2025
+769,Sitapur,Sitapur,Apple,Kasmir/Shimla - II,Medium,7650,8000,7850,20 Feb 2025
+770,Sitapur,Sitapur,Apple,Kasmir/Shimla - II,Medium,7650,8000,7855,17 Feb 2025
+771,Sitapur,Sitapur,Apple,Kasmir/Shimla - II,Medium,7650,8000,7860,15 Feb 2025
+772,Sitapur,Sitapur,Apple,Kasmir/Shimla - II,Medium,7650,8000,7860,18 Feb 2025
+773,Sitapur,Sitapur,Apple,Kasmir/Shimla - II,Medium,7650,8000,7860,19 Feb 2025
+774,Bulandshahar,Siyana,Apple,Red  Gold,Medium,4200,4400,4300,13 Feb 2025
+775,Bulandshahar,Siyana,Apple,Red  Gold,Medium,4200,4400,4300,14 Feb 2025
+776,Bulandshahar,Siyana,Apple,Red  Gold,Medium,4200,4400,4300,15 Feb 2025
+777,Bulandshahar,Siyana,Apple,Red  Gold,Medium,4200,4400,4300,16 Feb 2025
+778,Bulandshahar,Siyana,Apple,Red  Gold,Medium,4200,4400,4300,17 Feb 2025
+779,Bulandshahar,Siyana,Apple,Red  Gold,Medium,4200,4400,4300,18 Feb 2025
+780,Bulandshahar,Siyana,Apple,Red  Gold,Medium,4200,4400,4300,19 Feb 2025
+781,Bulandshahar,Siyana,Apple,Red  Gold,Medium,4200,4400,4300,20 Feb 2025
+782,Amethi,Sultanpur,Apple,Delicious,Medium,8000,8250,8100,13 Feb 2025
+783,Amethi,Sultanpur,Apple,Delicious,Medium,8000,8250,8125,19 Feb 2025
+784,Amethi,Sultanpur,Apple,Delicious,Medium,8050,8200,8100,14 Feb 2025
+785,Amethi,Sultanpur,Apple,Delicious,Medium,8050,8300,8125,20 Feb 2025
+786,Amethi,Sultanpur,Apple,Delicious,Medium,8055,8200,8100,15 Feb 2025
+787,Amethi,Sultanpur,Apple,Delicious,Medium,8055,8200,8100,17 Feb 2025
+788,Amethi,Sultanpur,Apple,Delicious,Medium,8055,8200,8100,18 Feb 2025
+789,Kushinagar,Tamkuhi road,Apple,Delicious,Medium,7500,7600,7550,20 Feb 2025
+790,Khiri (Lakhimpur),Tikonia,Apple,Delicious,Medium,7760,7880,7790,15 Feb 2025
+791,Khiri (Lakhimpur),Tikonia,Apple,Delicious,Medium,7780,7890,7830,14 Feb 2025
+792,Khiri (Lakhimpur),Tikonia,Apple,Delicious,Medium,7820,7880,7840,17 Feb 2025
+793,Khiri (Lakhimpur),Tikonia,Apple,Delicious,Medium,7830,7910,7880,13 Feb 2025
+794,Shahjahanpur,Tilhar,Apple,Delicious,Medium,7600,7730,7670,14 Feb 2025
+795,Shahjahanpur,Tilhar,Apple,Delicious,Medium,7615,7715,7665,13 Feb 2025
+796,Shahjahanpur,Tilhar,Apple,Delicious,Medium,7620,7720,7670,18 Feb 2025
+797,Shahjahanpur,Tilhar,Apple,Delicious,Medium,7630,7730,7680,19 Feb 2025
+798,Shahjahanpur,Tilhar,Apple,Delicious,Medium,7635,7735,7685,16 Feb 2025
+799,Shahjahanpur,Tilhar,Apple,Delicious,Medium,7640,7740,7690,15 Feb 2025
+800,Shahjahanpur,Tilhar,Apple,Delicious,Medium,7640,7740,7695,17 Feb 2025
+801,Shahjahanpur,Tilhar,Apple,Delicious,Medium,7810,7910,7860,20 Feb 2025
+802,Balrampur,Tulsipur,Apple,Kasmir/Shimla - II,Large,8300,8500,8400,13 Feb 2025
+803,Balrampur,Tulsipur,Apple,Kasmir/Shimla - II,Medium,8400,8450,8425,17 Feb 2025
+804,Balrampur,Tulsipur,Apple,Kasmir/Shimla - II,Medium,8400,8450,8430,20 Feb 2025
+805,Balrampur,Tulsipur,Apple,Kasmir/Shimla - II,Medium,8400,8480,8440,15 Feb 2025
+806,Balrampur,Tulsipur,Apple,Kasmir/Shimla - II,Medium,8400,8520,8450,14 Feb 2025
+807,Balrampur,Tulsipur,Apple,Kasmir/Shimla - II,Medium,8420,8470,8440,18 Feb 2025
+808,Balrampur,Tulsipur,Apple,Kasmir/Shimla - II,Medium,8420,8470,8440,19 Feb 2025
+809,Balrampur,Tulsipur,Apple,Kasmir/Shimla - II,Medium,8420,8500,8450,16 Feb 2025
+810,Firozabad,Tundla,Apple,Apple,Medium,7900,8125,8100,17 Feb 2025
+811,Firozabad,Tundla,Apple,Apple,Medium,7950,8050,8000,13 Feb 2025
+812,Firozabad,Tundla,Apple,Apple,Medium,8050,8125,8100,18 Feb 2025
+813,Firozabad,Tundla,Apple,Apple,Medium,8050,8150,8100,14 Feb 2025
+814,Firozabad,Tundla,Apple,Apple,Medium,8050,8150,8100,15 Feb 2025
+815,Badaun,Ujhani,Apple,Apple,Medium,7700,7750,7720,13 Feb 2025
+816,Badaun,Ujhani,Apple,Apple,Medium,7700,7750,7725,15 Feb 2025
+817,Badaun,Ujhani,Apple,Apple,Medium,7750,7850,7800,19 Feb 2025
+818,Unnao,Unnao,Apple,Kasmir/Shimla - II,Medium,7800,8000,7900,13 Feb 2025
+819,Unnao,Unnao,Apple,Kasmir/Shimla - II,Medium,7800,8000,7900,14 Feb 2025
+820,Unnao,Unnao,Apple,Kasmir/Shimla - II,Medium,7800,8000,7900,15 Feb 2025
+821,Unnao,Unnao,Apple,Kasmir/Shimla - II,Medium,7875,8000,7915,16 Feb 2025
+822,Unnao,Unnao,Apple,Kasmir/Shimla - II,Medium,7875,8000,7925,17 Feb 2025
+823,Unnao,Unnao,Apple,Kasmir/Shimla - II,Medium,7875,8000,7925,18 Feb 2025
+824,Kanpur,Uttaripura,Apple,Delicious,Medium,7660,7860,7760,17 Feb 2025
+825,Kanpur,Uttaripura,Apple,Delicious,Medium,7670,7870,7770,13 Feb 2025
+826,Kanpur,Uttaripura,Apple,Delicious,Medium,7685,8885,7785,14 Feb 2025
+827,Kanpur,Uttaripura,Apple,Delicious,Medium,7700,7900,7800,15 Feb 2025
+828,Kanpur,Uttaripura,Apple,Delicious,Medium,7700,7900,7800,18 Feb 2025
+829,Kanpur,Uttaripura,Apple,Delicious,Medium,7725,7925,7825,19 Feb 2025
+830,Kanpur,Uttaripura,Apple,Delicious,Medium,7750,7950,7850,20 Feb 2025
+831,Varanasi,Varanasi,Apple,Delicious,Medium,8245,8475,8350,14 Feb 2025
+832,Varanasi,Varanasi,Apple,Delicious,Medium,8250,8450,8365,15 Feb 2025
+833,Varanasi,Varanasi,Apple,Delicious,Medium,8250,8475,8370,16 Feb 2025
+834,Varanasi,Varanasi,Apple,Delicious,Medium,8265,8475,8380,20 Feb 2025
+835,Varanasi,Varanasi,Apple,Delicious,Medium,8270,8450,8350,13 Feb 2025
+836,Varanasi,Varanasi,Apple,Delicious,Medium,8300,8450,8380,19 Feb 2025
+837,Varanasi,Varanasi,Apple,Delicious,Medium,8300,8475,8385,17 Feb 2025
+838,Kanpur,Varipaal,Apple,Apple,Medium,4000,4200,4100,13 Feb 2025
+839,Kanpur,Varipaal,Apple,Apple,Medium,4000,4500,4200,15 Feb 2025
+840,Kanpur,Varipaal,Apple,Apple,Medium,4000,5000,4500,18 Feb 2025
+841,Ballia,Vilthararoad,Apple,Apple,Medium,8600,8800,8700,15 Feb 2025
+842,Ballia,Vilthararoad,Apple,Apple,Medium,8600,8800,8700,18 Feb 2025
+843,Ballia,Vilthararoad,Apple,Apple,Medium,8700,8800,8750,14 Feb 2025
+844,Ballia,Vilthararoad,Apple,Apple,Medium,8700,8800,8750,17 Feb 2025
+845,Ballia,Vilthararoad,Apple,Apple,Medium,8700,8800,8750,19 Feb 2025
+846,Ballia,Vilthararoad,Apple,Apple,Medium,8800,8900,8850,13 Feb 2025
+847,Pillibhit,Vishalpur,Apple,Delicious,Medium,7620,7715,7660,13 Feb 2025
+848,Pillibhit,Vishalpur,Apple,Delicious,Medium,7670,7730,7700,14 Feb 2025
+849,Pillibhit,Vishalpur,Apple,Delicious,Medium,7700,7800,7750,17 Feb 2025
+850,Pillibhit,Vishalpur,Apple,Delicious,Medium,7725,7800,7760,16 Feb 2025
+851,Pillibhit,Vishalpur,Apple,Delicious,Medium,7730,7800,7760,18 Feb 2025
+852,Pillibhit,Vishalpur,Apple,Delicious,Medium,7740,7800,7770,15 Feb 2025
+853,Pillibhit,Vishalpur,Apple,Delicious,Medium,7770,7835,7800,19 Feb 2025
+854,Pillibhit,Vishalpur,Apple,Delicious,Medium,7800,7900,7850,20 Feb 2025
+855,Sitapur,Viswan,Apple,Kasmir/Shimla - II,Medium,7825,7925,7875,20 Feb 2025
+856,Sitapur,Viswan,Apple,Kasmir/Shimla - II,Medium,7830,7930,7880,14 Feb 2025
+857,Sitapur,Viswan,Apple,Kasmir/Shimla - II,Medium,7830,7930,7880,18 Feb 2025
+858,Sitapur,Viswan,Apple,Kasmir/Shimla - II,Medium,7840,7940,7890,19 Feb 2025
+859,Sitapur,Viswan,Apple,Kasmir/Shimla - II,Medium,7850,7950,7900,13 Feb 2025
+860,Sitapur,Viswan,Apple,Kasmir/Shimla - II,Medium,7850,7950,7900,15 Feb 2025
+861,Sitapur,Viswan,Apple,Kasmir/Shimla - II,Medium,7850,7950,7900,17 Feb 2025
+862,Badaun,Wazirganj,Apple,Delicious,Medium,7650,7800,7700,14 Feb 2025
+1,Kolkata,Mechua,Apple,Apple,Large,12000,13000,12000,13 Feb 2025
+2,Kolkata,Mechua,Apple,Apple,Large,12000,13000,12000,14 Feb 2025
+3,Kolkata,Mechua,Apple,Apple,Large,12000,13000,12000,15 Feb 2025
+4,Kolkata,Mechua,Apple,Apple,Large,12000,13000,12000,16 Feb 2025
+5,Kolkata,Mechua,Apple,Apple,Large,12000,13000,12000,17 Feb 2025
+6,Kolkata,Mechua,Apple,Apple,Large,12000,13000,12000,18 Feb 2025
+7,Kolkata,Mechua,Apple,Apple,Large,12000,13000,12000,19 Feb 2025
+8,Kolkata,Mechua,Apple,Apple,Medium,9000,10000,9000,13 Feb 2025
+9,Kolkata,Mechua,Apple,Apple,Medium,9000,10000,9000,14 Feb 2025
+10,Kolkata,Mechua,Apple,Apple,Medium,9000,10000,9000,15 Feb 2025
+11,Kolkata,Mechua,Apple,Apple,Medium,9000,10000,9000,16 Feb 2025
+12,Kolkata,Mechua,Apple,Apple,Medium,9000,10000,9000,17 Feb 2025
+13,Kolkata,Mechua,Apple,Apple,Medium,9000,10000,9000,19 Feb 2025
+14,Kolkata,Mechua,Apple,Apple,Medium,9000,10000,10000,18 Feb 2025
+15,Kolkata,Mechua,Apple,Apple,Small,6000,7000,7000,13 Feb 2025
+16,Kolkata,Mechua,Apple,Apple,Small,6000,7000,7000,14 Feb 2025
+17,Kolkata,Mechua,Apple,Apple,Small,6000,7000,7000,15 Feb 2025
+18,Kolkata,Mechua,Apple,Apple,Small,6000,7000,7000,16 Feb 2025
+19,Kolkata,Mechua,Apple,Apple,Small,6000,7000,7000,17 Feb 2025
+20,Kolkata,Mechua,Apple,Apple,Small,6000,7000,7000,18 Feb 2025
+21,Kolkata,Mechua,Apple,Apple,Small,6000,7000,7000,19 Feb 2025
+1,Jammu,Akhnoor,Apple,Delicious,Medium,8400,10800,9600,19 Feb 2025
+2,Jammu,Akhnoor,Apple,Delicious,Medium,8500,10500,9500,14 Feb 2025
+3,Jammu,Akhnoor,Apple,Delicious,Medium,8500,10500,9500,17 Feb 2025
+4,Jammu,Akhnoor,Apple,Delicious,Medium,8500,10500,9500,18 Feb 2025
+5,Jammu,Akhnoor,Apple,Delicious,Medium,8700,10700,9700,15 Feb 2025
+6,Jammu,Batote,Apple,Other,Medium,8000,10000,9000,13 Feb 2025
+7,Jammu,Batote,Apple,Other,Medium,8000,10000,9000,15 Feb 2025
+8,Jammu,Batote,Apple,Other,Medium,8000,10000,9000,19 Feb 2025
+9,Jammu,Batote,Apple,Other,Medium,8000,10000,9000,20 Feb 2025
+10,Jammu,Batote,Apple,Other,Medium,9000,11000,10000,14 Feb 2025
+11,Jammu,Batote,Apple,Other,Medium,9000,11000,10000,18 Feb 2025
+12,Kathua,Kathua,Apple,Delicious,Medium,8000,12000,10000,13 Feb 2025
+13,Kathua,Kathua,Apple,Delicious,Medium,8000,12000,10000,14 Feb 2025
+14,Kathua,Kathua,Apple,Delicious,Medium,8000,12000,10000,15 Feb 2025
+15,Kathua,Kathua,Apple,Delicious,Medium,8000,12000,10000,17 Feb 2025
+16,Kathua,Kathua,Apple,Delicious,Medium,8000,12000,10000,18 Feb 2025
+17,Kathua,Kathua,Apple,Delicious,Medium,8000,12000,10000,19 Feb 2025
+18,Kathua,Kathua,Apple,Delicious,Medium,8000,12000,10000,20 Feb 2025
+19,Jammu,Narwal Jammu (F&V),Apple,Delicious,Medium,6000,12000,9000,13 Feb 2025
+20,Jammu,Narwal Jammu (F&V),Apple,Delicious,Medium,7000,13000,10000,14 Feb 2025
+21,Jammu,Narwal Jammu (F&V),Apple,Delicious,Medium,7000,13000,10000,15 Feb 2025
+22,Jammu,Narwal Jammu (F&V),Apple,Delicious,Medium,7000,13000,10000,17 Feb 2025
+23,Jammu,Narwal Jammu (F&V),Apple,Delicious,Medium,7000,13000,10000,18 Feb 2025
+24,Jammu,Narwal Jammu (F&V),Apple,Delicious,Medium,7000,13000,10000,19 Feb 2025
+25,Jammu,Narwal Jammu (F&V),Apple,Delicious,Medium,8000,14000,11000,20 Feb 2025
+26,Srinagar,Parimpore,Apple,Delicious,Large,6500,7500,7000,19 Feb 2025
+27,Srinagar,Parimpore,Apple,Delicious,Large,7000,8000,7500,17 Feb 2025
+28,Srinagar,Parimpore,Apple,Delicious,Large,7500,8500,8000,13 Feb 2025
+29,Srinagar,Parimpore,Apple,Delicious,Large,7500,8500,8000,14 Feb 2025
+30,Srinagar,Parimpore,Apple,Delicious,Large,8000,9000,8500,15 Feb 2025
+31,Srinagar,Parimpore,Apple,Delicious,Large,8000,9000,8500,18 Feb 2025
+32,Udhampur,Udhampur,Apple,Delicious,Medium,8000,12000,10000,14 Feb 2025
+33,Udhampur,Udhampur,Apple,Delicious,Medium,8000,12000,10000,15 Feb 2025
+34,Udhampur,Udhampur,Apple,Delicious,Medium,8000,12000,11000,20 Feb 2025
+35,Udhampur,Udhampur,Apple,Delicious,Medium,8000,14000,11000,18 Feb 2025
+36,Udhampur,Udhampur,Apple,Delicious,Medium,8000,14000,11000,19 Feb 2025
+37,Udhampur,Udhampur,Apple,Delicious,Small,8000,12000,10000,13 Feb 2025

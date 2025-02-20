@@ -276,6 +276,126 @@ def forecast():
     except Exception as e:
         logging.error(f"Error in /forecast route: {str(e)}")
         return jsonify({"status": "error", "message": str(e)}), 400
+# Register the blueprint
+
+CSV_PATH = "data/scraped/apple_data.csv"  # Path to your CSV
+
+@app.route('/')
+def home():
+    """
+    Renders a simple home page or directly the form. 
+    We'll redirect to /analysis_form for the actual user input.
+    """
+    return '<h2>Welcome! Go to <a href="/analysis_form">Analysis Form</a>.</h2>'
+
+@app.route('/analysis_form', methods=['GET'])
+def analysis_form():
+    """
+    Renders a form where the user can choose District, Market, Variety, and Grade.
+    On submission, it sends a GET request to /analysis with query parameters.
+    """
+    # We can load some unique values from the CSV to populate dropdowns:
+    if not os.path.exists(CSV_PATH):
+        return f"CSV file not found at {CSV_PATH}", 500
+    
+    df = pd.read_csv(CSV_PATH)
+
+    # Convert date columns, numeric columns if needed
+    # (Only necessary if you want to handle them here.)
+    # For the sake of generating dropdown options, we just need the string columns.
+
+    districts = sorted(df["District"].dropna().unique().tolist())
+    markets   = sorted(df["Market"].dropna().unique().tolist())
+    varieties = sorted(df["Variety"].dropna().unique().tolist())
+    grades    = sorted(df["Grade"].dropna().unique().tolist())
+
+    return render_template("analysis_form.html",
+                           districts=districts,
+                           markets=markets,
+                           varieties=varieties,
+                           grades=grades)
+
+@app.route('/analysis', methods=['GET'])
+def analysis():
+    """
+    Loads the scraped apple data from a CSV file, filters for specific state-market combos,
+    creates a table and a separate Plotly chart for each, and displays them on one page.
+    """
+    csv_path = "data/scraped/apple_data.csv"
+    if not os.path.exists(csv_path):
+        return f"CSV file not found at {csv_path}", 500
+
+    # 1. Load the CSV
+    df = pd.read_csv(csv_path)
+    
+    # 2. Convert price columns to numeric & Date to datetime
+    for col in ['Min Price', 'Max Price', 'Model Price']:
+        df[col] = pd.to_numeric(df[col], errors='coerce')
+    df['Date'] = pd.to_datetime(df['Date'], format='%d %b %Y', errors='coerce')
+    df.dropna(subset=['Date'], inplace=True)
+    df.sort_values(by="Date", inplace=True)
+
+    # 3. Define the combos you want
+    # The CSV has 'District' and 'Market' columns for states and markets
+    combos = [
+        ("Srinagar", "Parimpore"),
+        ("Jammu", "Narwal Jammu (F&V)"),
+        ("Delhi", "Azadpur"),
+        ("Bangalore", "Binny Mill (F&V)"),
+        ("Kolkata", "Mechua"),
+        ("Amethi", "Sultanpur")
+    ]
+
+    analysis_items = []
+
+    for (district_val, market_val) in combos:
+        # 4. Filter the DataFrame for each state–market combo
+        subdf = df[(df['District'] == district_val) & (df['Market'] == market_val)].copy()
+        if subdf.empty:
+            logging.info(f"No data found for District={district_val}, Market={market_val}")
+            continue
+        
+        # 5. Build a table of the latest data
+        # e.g. last 10 rows or so, sorted descending by Date
+        subdf_latest = subdf.sort_values(by="Date", ascending=False).head(10)
+        table_html = subdf_latest.to_html(
+            classes="table table-striped",
+            index=False,
+            border=0
+        )
+
+        # 6. Create a separate Plotly figure for this combo
+        fig = make_subplots(rows=1, cols=1, subplot_titles=[f"{district_val} - {market_val}"])
+        
+        # You can plot Model Price (or Min/Max). 
+        # Or plot multiple lines for each Variety/Grade combination, for example:
+        for (variety_val, grade_val), group in subdf.groupby(["Variety", "Grade"]):
+            trace_name = f"{variety_val} ({grade_val})"
+            fig.add_trace(go.Scatter(
+                x=group['Date'],
+                y=group['Model Price'],
+                mode='lines+markers',
+                name=trace_name
+            ), row=1, col=1)
+        
+        fig.update_layout(
+            xaxis_title="Date",
+            yaxis_title="Price (₹/kg)",
+            template="plotly_white",
+            margin=dict(l=40, r=40, t=40, b=40)
+        )
+
+        plot_div = pyo.plot(fig, include_plotlyjs=False, output_type='div')
+        
+        # 7. Store all the info for the template
+        combo_title = f"{district_val} - {market_val}"
+        analysis_items.append({
+            "combo_title": combo_title,
+            "table_html": table_html,
+            "plot_div": plot_div
+        })
+
+    return render_template("analysis.html", analysis_items=analysis_items)
 
 @app.route("/qr_app")
 def qr_app():

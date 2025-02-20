@@ -25,3 +25,9 @@ flask-socketio  # Real-time WebSockets
 matplotlib
 seaborn
 bokeh
+Flask
+requests
+beautifulsoup4
+pandas
+gunicorn
+# ...

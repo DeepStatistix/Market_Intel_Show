@@ -1,0 +1,55 @@
+<!-- file: templates/dashboard.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Agriculture Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <h1>Agricultural Market Dashboard</h1>
+
+  <section>
+    <h2>Latest Agmarknet Data</h2>
+    {% if agmark_data %}
+      <table>
+        <thead>
+          <tr>
+            {% for col in agmark_data[0].keys() %}
+              <th>{{ col }}</th>
+            {% endfor %}
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in agmark_data %}
+            <tr>
+              {% for val in row.values() %}
+                <td>{{ val }}</td>
+              {% endfor %}
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    {% else %}
+      <p>No market data available at the moment.</p>
+    {% endif %}
+  </section>
+
+  <section>
+    <h2>Agriculture News</h2>
+    {% if news_articles %}
+      <ul>
+        {% for article in news_articles %}
+          <li>
+            <a href="{{ article.url }}" target="_blank">{{ article.title }}</a><br>
+            <small>{{ article.source.name if article.source }}</small><br>
+            <p>{{ article.description }}</p>
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>No news articles found.</p>
+    {% endif %}
+  </section>
+</body>
+</html>
