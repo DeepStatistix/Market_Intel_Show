@@ -5,6 +5,10 @@
   <title>Market Intelligence - Future Only</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <style>
+    /* Optional inline styles if not in styles.css */
+    .hidden { display: none; }
+  </style>
 </head>
 <body>
   <div class="container">
@@ -17,18 +21,20 @@
           <option value="Pulwama_Pachhar">Pulwama Pachhar</option>
           <option value="Pulwama_Pricoo">Pulwama Pricoo</option>
           <option value="Shopian">Shopian</option>
+          <option value="Narwal">Narwal</option>
         </select>
       </div>
       <div class="form-group">
         <label for="variety">Variety:</label>
         <select id="variety" name="variety" required>
+          <!-- Initial varieties; will be updated based on market selection -->
           <option value="American">American</option>
           <option value="Delicious">Delicious</option>
           <option value="Kullu Delicious">Kullu Delicious</option>
           <option value="Maharaji">Maharaji</option>
         </select>
       </div>
-      <div class="form-group">
+      <div class="form-group" id="gradeDiv">
         <label for="grade">Grade:</label>
         <select id="grade" name="grade" required>
           <option value="A">Grade A</option>
@@ -94,7 +100,7 @@
             }
           },
           x: {
-            type: 'category', // no big time gaps
+            type: 'category',
             title: {
               display: true,
               text: 'Date'
@@ -103,6 +109,41 @@
         }
       }
     });
+
+    // Function to update form fields based on market selection
+    function updateForm() {
+      const marketSelect = document.getElementById('market');
+      const market = marketSelect.value;
+      const gradeDiv = document.getElementById('gradeDiv');
+      const varietySelect = document.getElementById('variety');
+
+      if (market === "Narwal") {
+        // Hide grade field for Narwal
+        gradeDiv.style.display = "none";
+        // Update variety options for Narwal-specific varieties
+        varietySelect.innerHTML = `
+          <option value="American">American</option>
+          <option value="Hazratbali">Hazratbali</option>
+          <option value="Condition">Condition</option>
+          <option value="Razakwadi">Razakwadi</option>
+        `;
+      } else {
+        // Show grade field for other markets
+        gradeDiv.style.display = "block";
+        // Set common varieties for other markets
+        varietySelect.innerHTML = `
+          <option value="American">American</option>
+          <option value="Delicious">Delicious</option>
+          <option value="Kullu Delicious">Kullu Delicious</option>
+          <option value="Maharaji">Maharaji</option>
+        `;
+      }
+    }
+
+    // Attach event listener to market dropdown
+    document.getElementById('market').addEventListener('change', updateForm);
+    // Set initial form state on page load
+    updateForm();
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
@@ -113,7 +154,8 @@
       try {
         const market = document.getElementById('market').value;
         const variety = document.getElementById('variety').value;
-        const grade  = document.getElementById('grade').value;
+        // For Narwal, grade is ignored.
+        const grade  = document.getElementById('grade') ? document.getElementById('grade').value : "";
         const days   = document.getElementById('days').value;
 
         const response = await fetch('/forecast', {
@@ -129,7 +171,7 @@
           throw new Error(result.message);
         }
 
-        // We only have forecasted_prices and future_dates
+        // Extract forecasted_dates and forecasted_prices from result
         const forecastDates  = result.future_dates; 
         const forecastPrices = result.forecasted_prices; 
 

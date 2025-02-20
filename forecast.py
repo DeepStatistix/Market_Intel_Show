@@ -15,13 +15,15 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 MARKET_DATA_PATHS = {
     "Pulwama_Pachhar": "data/Pulwama/Pachhar/",
     "Pulwama_Pricoo":  "data/Pulwama/Prichoo/",
-    "Shopian":         "data/Shopian/"
+    "Shopian":         "data/Shopian/",
+    "Narwal":          "data/Narwal/"
 }
 
 MODEL_PATHS = {
     "Pulwama_Pachhar": "models/Pulwama/Pachhar/{variety}/{grade}/",
     "Pulwama_Pricoo":  "models/Pulwama/Prichoo/{variety}/{grade}/",
-    "Shopian":         "models/Shopian/"
+    "Shopian":         "models/Shopian/",
+    "Narwal":          "models/Narwal/"
 }
 
 def load_dataset(market, variety, grade):
@@ -31,7 +33,11 @@ def load_dataset(market, variety, grade):
         logging.error(f"❌ Market '{market}' not found in MARKET_DATA_PATHS.")
         return None
 
-    file_path = os.path.join(base_dir, f"{variety}_{grade}_dataset.csv")
+    # For Narwal market, datasets do not have a grade column.
+    if market == "Narwal":
+        file_path = os.path.join(base_dir, f"{variety}_dataset.csv")
+    else:
+        file_path = os.path.join(base_dir, f"{variety}_{grade}_dataset.csv")
     logging.info(f"✅ Checking dataset path: {file_path}")
     if not os.path.exists(file_path):
         logging.error(f"❌ Dataset file not found: {file_path}")
@@ -60,9 +66,14 @@ def load_dataset(market, variety, grade):
 
 def load_lstm_model(market, variety, grade):
     """Load LSTM model, return model + seq_length."""
-    base_path = MODEL_PATHS.get(market, "")
-    base_path = base_path.format(variety=variety, grade=grade)
-    model_path = f"{base_path}lstm_{variety}_grade_{grade}.h5"
+    if market == "Narwal":
+        # For Narwal, models are stored without a grade folder/filename.
+        base_path = MODEL_PATHS.get(market, "")
+        model_path = os.path.join(base_path, f"lstm_{variety}.h5")
+    else:
+        base_path = MODEL_PATHS.get(market, "")
+        base_path = base_path.format(variety=variety, grade=grade)
+        model_path = f"{base_path}lstm_{variety}_grade_{grade}.h5"
     logging.info(f"Checking model path: {model_path}")
 
     if not os.path.exists(model_path):
@@ -110,7 +121,10 @@ def generate_forecast(market, variety, grade, forecast_days=10, seq_length=None)
         logging.error("❌ seq_length must be provided.")
         raise ValueError("seq_length must be provided from the model input_shape.")
 
-    logging.info(f"✅ Generating forecast for {market}, {variety}, {grade}, days={forecast_days}")
+    # For Narwal, grade is not used; so we pass an empty string or None.
+    grade_display = grade if market != "Narwal" else ""
+    logging.info(f"✅ Generating forecast for {market}, {variety} {grade_display}, days={forecast_days}")
+    
     df = load_dataset(market, variety, grade)
     if df is None:
         return None
@@ -133,6 +147,29 @@ def generate_forecast(market, variety, grade, forecast_days=10, seq_length=None)
 
     logging.info(f"✅ Forecast done. Predictions: {preds}")
     return preds
+
+# Trading window functions remain unchanged, assuming they apply only to markets that use grade.
+def clip_trading_window_after_hist_last_date(hist_last_date, start_date, end_date):
+    """
+    hist_last_date: pd.Timestamp or datetime.date
+    start_date, end_date: datetime.date
+    Shifts start_date if it falls before hist_last_date + 1 day.
+    """
+    if isinstance(hist_last_date, pd.Timestamp):
+        hist_last_date = hist_last_date.date()
+
+    if start_date <= hist_last_date:
+        start_date = hist_last_date + datetime.timedelta(days=1)
+    
+    if start_date > end_date:
+        return []
+
+    future_dates = []
+    current = start_date
+    while current <= end_date:
+        future_dates.append(current)
+        current += datetime.timedelta(days=1)
+    return future_dates
 
 MARKET_TRADE_WINDOWS = {
     "Pulwama_Pachhar": {
@@ -183,29 +220,6 @@ MARKET_TRADE_WINDOWS = {
     }
 }
 
-def clip_trading_window_after_hist_last_date(hist_last_date, start_date, end_date):
-    """
-    hist_last_date: pd.Timestamp or datetime.date
-    start_date, end_date: datetime.date
-    Shifts start_date if it falls before hist_last_date + 1 day.
-    """
-    # convert any Timestamp => date
-    if isinstance(hist_last_date, pd.Timestamp):
-        hist_last_date = hist_last_date.date()
-
-    if start_date <= hist_last_date:
-        start_date = hist_last_date + datetime.timedelta(days=1)
-    
-    if start_date > end_date:
-        return []
-
-    future_dates = []
-    current = start_date
-    while current <= end_date:
-        future_dates.append(current)
-        current += datetime.timedelta(days=1)
-    return future_dates
-
 def get_future_dates_for_trading_window(market, variety, grade, year):
     """Return list of daily dates for the specified year within the known trading window."""
     market_entry = MARKET_TRADE_WINDOWS.get(market)
@@ -239,6 +253,7 @@ def get_future_dates_for_trading_window(market, variety, grade, year):
 
 # Standalone debug
 if __name__ == "__main__":
+    # Example usage for a non-Narwal market:
     market = "Pulwama_Pachhar"
     variety = "American"
     grade = "A"
@@ -254,12 +269,10 @@ if __name__ == "__main__":
             logging.error("No dataset found or invalid. Exiting.")
         else:
             df.sort_values(by="Date", inplace=True)
-            # Plot last 30 historical
             hist_df = df.tail(30)
             hist_prices = hist_df["Avg Price (per kg)"].tolist()
             hist_dates = hist_df["Date"].dt.strftime("%Y-%m-%d").tolist()
 
-            # Forecast
             preds = generate_forecast(market, variety, grade, forecast_days=days, seq_length=seq_len)
             if preds is not None:
                 last_date = df["Date"].max()
@@ -269,11 +282,44 @@ if __name__ == "__main__":
                 ]
                 logging.info(f"Forecast: {preds}")
 
-                # Quick plot
                 plt.figure(figsize=(10,5))
-                #plt.plot(hist_dates, hist_prices, marker='o', color='blue', label="Historical")
                 plt.plot(future_dates, preds, marker='o', color='orange', label="Forecast")
                 plt.title(f"{variety} Grade {grade} in {market}")
+                plt.xlabel("Date")
+                plt.ylabel("Price (₹/kg)")
+                plt.xticks(rotation=45)
+                plt.legend()
+                plt.grid()
+                plt.show()
+
+    # Example usage for Narwal market (which has no grade):
+    market = "Narwal"
+    variety = "American"
+    grade = None  # Grade is not applicable
+    days = 10
+
+    logging.info(f"Debug run. Market={market}, variety={variety}, no grade, days={days}")
+    model, seq_len = load_lstm_model(market, variety, grade)
+    if model is None:
+        logging.error("No model found for Narwal. Exiting.")
+    else:
+        df = load_dataset(market, variety, grade)
+        if df is None:
+            logging.error("No dataset found or invalid for Narwal. Exiting.")
+        else:
+            df.sort_values(by="Date", inplace=True)
+            preds = generate_forecast(market, variety, grade, forecast_days=days, seq_length=seq_len)
+            if preds is not None:
+                last_date = df["Date"].max()
+                future_dates = [
+                    (last_date + datetime.timedelta(days=i)).strftime("%Y-%m-%d")
+                    for i in range(1, days+1)
+                ]
+                logging.info(f"Forecast for Narwal: {preds}")
+
+                plt.figure(figsize=(10,5))
+                plt.plot(future_dates, preds, marker='o', color='orange', label="Forecast")
+                plt.title(f"{variety} in {market}")
                 plt.xlabel("Date")
                 plt.ylabel("Price (₹/kg)")
                 plt.xticks(rotation=45)

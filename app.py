@@ -39,22 +39,29 @@ app = Flask(__name__)
 MARKET_MAPPING = {
     "Pulwama_Pachhar": "Pulwama_Pachhar",
     "Pulwama_Pricoo":  "Pulwama_Pricoo",
-    "Shopian":         "Shopian"
+    "Shopian":         "Shopian",
+    "Narwal":          "Narwal"
 }
-VARIETIES = ["American", "Delicious", "Kullu Delicious", "Maharaji"]
-GRADES = ["A", "B"]
+# Allowed varieties for other markets vs. Narwal can differ. For simplicity, we let the collected dataset decide.
+VARIETIES = [["American", "Delicious", "Kullu Delicious", "Maharaji","Hazratbali","Condition","Razakwadi"]]  # Will be set based on collected data.
+GRADES = ["A","B"]     # Will be set based on collected data.
 
 def validate_inputs(market, variety, grade, days):
     logging.info(f"Validating inputs: market={market}, variety={variety}, grade={grade}, days={days}")
     if market not in MARKET_MAPPING:
         raise BadRequest(f"Unsupported market. Choose from: {', '.join(MARKET_MAPPING.keys())}")
-    if variety not in VARIETIES:
-        raise BadRequest(f"Unsupported variety. Choose from: {', '.join(VARIETIES)}")
-    if grade not in GRADES:
-        raise BadRequest(f"Unsupported grade. Choose from: {', '.join(GRADES)}")
+    
+    # For Narwal market, ignore the grade.
+    if market == "Narwal":
+        grade = None
+    else:
+        if grade not in GRADES:
+            raise BadRequest(f"Unsupported grade. Choose from: {', '.join(GRADES)}")
+    
     if not (1 <= days <= 365):
         raise BadRequest("Days must be between 1 and 365")
-    return MARKET_MAPPING[market]
+    
+    return MARKET_MAPPING[market], grade
 
 # -------------------- ROUTES --------------------
 
@@ -66,21 +73,19 @@ def index():
 if not os.path.exists("static"):
     os.makedirs("static")
 
-# Load the dataset
+# Load the dataset (already filtered where Mask == 1)
 DATA_FOLDER = "data"
-df = collect_all_data(DATA_FOLDER)  # Already filtered where Mask == 1
-
-# Validate dataset load
+df = collect_all_data(DATA_FOLDER)
 if df.empty:
     logging.error("No valid data found after filtering Mask == 1.")
 else:
     logging.info(f"Loaded dataset with {len(df)} rows.")
 
-# Dropdown options
+# Set dropdown options based on collected data
 MARKETS = df["Market"].unique().tolist()
 VARIETIES = df["Variety"].unique().tolist()
-GRADES = df["Grade"].unique().tolist()
-
+# For markets with grades, use unique grades; for Narwal, it might be "Unknown" or missing.
+GRADES = df["Grade"].dropna().unique().tolist()
 
 @app.route('/plot', methods=['GET', 'POST'])
 def plot():
@@ -91,36 +96,35 @@ def plot():
         return render_template('plot.html', markets=MARKETS, varieties=VARIETIES, grades=GRADES)
 
     try:
-        # Get user inputs
         market = request.form.get("market")
         variety = request.form.get("variety")
         grade = request.form.get("grade")
 
+        # For Narwal, ignore the grade
+        if market == "Narwal":
+            grade = None
+
         logging.info(f"Generating plots for Market={market}, Variety={variety}, Grade={grade}")
 
-        # ------------------ INDIVIDUAL PLOT (FILTERED BY USER SELECTION) ------------------
-        filtered_df = df[
-            (df["Market"] == market) &
-            (df["Variety"] == variety) &
-            (df["Grade"] == grade)
-        ].copy()
+        # Filter dataset: if Narwal, ignore grade filter
+        if market == "Narwal":
+            filtered_df = df[(df["Market"] == market) & (df["Variety"] == variety)].copy()
+        else:
+            filtered_df = df[(df["Market"] == market) & (df["Variety"] == variety) & (df["Grade"] == grade)].copy()
 
         if filtered_df.empty:
             logging.warning(f"No data found for Market={market}, Variety={variety}, Grade={grade}")
             return render_template("plot.html", error="No data available.", markets=MARKETS, varieties=VARIETIES, grades=GRADES)
 
-        # Convert 'Date' column to datetime format and sort
         filtered_df["Date"] = pd.to_datetime(filtered_df["Date"], errors="coerce")
         filtered_df.sort_values("Date", inplace=True)
 
-        # **🔹 Fix for Missing Date Gaps: Plot Only Available Data**
         plt.figure(figsize=(15, 8))
-        plt.title(f"Price Trends for {variety} ({grade}) in {market}", fontsize=14)
+        plt.title(f"Price Trends for {variety}" + (f" ({grade})" if grade else ""), fontsize=14)
         plt.xlabel("Date", fontsize=12)
         plt.ylabel("Price (₹/kg)", fontsize=12)
         plt.grid(True, linestyle="--", alpha=0.6)
 
-        # Only plot available data points (skipping missing dates)
         plt.plot(filtered_df["Date"], filtered_df["Min Price (per kg)"], label="Min Price", 
                  color="blue", linestyle="dotted", marker="o", markersize=4)
         plt.plot(filtered_df["Date"], filtered_df["Max Price (per kg)"], label="Max Price", 
@@ -130,51 +134,52 @@ def plot():
 
         plt.legend(loc="upper left", fontsize=10)
         plt.xticks(rotation=45)
-        plt.ylim(20, 100)  # Ensures correct price scale
+        plt.ylim(5, 100)
         plt.tight_layout()
 
-        # Save the plot
         plot_path = "static/individual_plot.png"
         plt.savefig(plot_path)
         plt.close()
-
         logging.info(f"Individual plot saved at {plot_path}")
 
-        # ------------------ COMPARATIVE PLOTS ------------------
+        ## Comparative Plots remain unchanged (they filter by grade for non-Narwal markets)
+        if market != "Narwal":
+            market_comp_df = df[(df["Variety"] == variety) & (df["Grade"] == grade)][["Market", "Avg Price (per kg)"]]
+            market_avg_prices = market_comp_df.groupby("Market").mean().reset_index()
 
-        ## 📌 1️⃣ **Comparison Across Markets for the Selected Variety & Grade**
-        market_comp_df = df[(df["Variety"] == variety) & (df["Grade"] == grade)][["Market", "Avg Price (per kg)"]]
-        market_avg_prices = market_comp_df.groupby("Market").mean().reset_index()
+            plt.figure(figsize=(12, 8))
+            plt.bar(market_avg_prices["Market"], market_avg_prices["Avg Price (per kg)"], color="skyblue")
+            plt.title(f"Avg Price Comparison Across Markets for {variety} ({grade})", fontsize=14)
+            plt.xlabel("Market", fontsize=12)
+            plt.ylabel("Avg Price (₹/kg)", fontsize=12)
+            plt.xticks(rotation=45)
+            plt.grid(axis="y", linestyle="--", alpha=0.6)
 
-        plt.figure(figsize=(12, 8))
-        plt.bar(market_avg_prices["Market"], market_avg_prices["Avg Price (per kg)"], color="skyblue")
-        plt.title(f"Avg Price Comparison Across Markets for {variety} ({grade})", fontsize=14)
-        plt.xlabel("Market", fontsize=12)
-        plt.ylabel("Avg Price (₹/kg)", fontsize=12)
-        plt.xticks(rotation=45)
-        plt.grid(axis="y", linestyle="--", alpha=0.6)
+            market_plot_path = "static/market_comparison.png"
+            plt.tight_layout()
+            plt.savefig(market_plot_path)
+            plt.close()
+        else:
+            market_plot_path = None
 
-        market_plot_path = "static/market_comparison.png"
-        plt.tight_layout()
-        plt.savefig(market_plot_path)
-        plt.close()
+        if market != "Narwal":
+            variety_comp_df = df[(df["Market"] == market) & (df["Grade"] == grade)][["Variety", "Avg Price (per kg)"]]
+            variety_avg_prices = variety_comp_df.groupby("Variety").mean().reset_index()
 
-        ## 📌 2️⃣ **Comparison Across Varieties for the Selected Market & Grade**
-        variety_comp_df = df[(df["Market"] == market) & (df["Grade"] == grade)][["Variety", "Avg Price (per kg)"]]
-        variety_avg_prices = variety_comp_df.groupby("Variety").mean().reset_index()
+            plt.figure(figsize=(12, 8))
+            plt.bar(variety_avg_prices["Variety"], variety_avg_prices["Avg Price (per kg)"], color="lightcoral")
+            plt.title(f"Avg Price Comparison Across Varieties in {market} ({grade})", fontsize=14)
+            plt.xlabel("Variety", fontsize=12)
+            plt.ylabel("Avg Price (₹/kg)", fontsize=12)
+            plt.xticks(rotation=45)
+            plt.grid(axis="y", linestyle="--", alpha=0.6)
 
-        plt.figure(figsize=(12, 8))
-        plt.bar(variety_avg_prices["Variety"], variety_avg_prices["Avg Price (per kg)"], color="lightcoral")
-        plt.title(f"Avg Price Comparison Across Varieties in {market} ({grade})", fontsize=14)
-        plt.xlabel("Variety", fontsize=12)
-        plt.ylabel("Avg Price (₹/kg)", fontsize=12)
-        plt.xticks(rotation=45)
-        plt.grid(axis="y", linestyle="--", alpha=0.6)
-
-        variety_plot_path = "static/variety_comparison.png"
-        plt.tight_layout()
-        plt.savefig(variety_plot_path)
-        plt.close()
+            variety_plot_path = "static/variety_comparison.png"
+            plt.tight_layout()
+            plt.savefig(variety_plot_path)
+            plt.close()
+        else:
+            variety_plot_path = None
 
         logging.info("Comparative plots saved successfully.")
 
@@ -191,8 +196,9 @@ def plot():
 @app.route('/forecast', methods=['POST'])
 def forecast():
     """
-    Only compute & return the future forecast for 'days' steps, ignoring any historical plot.
-    We'll build official window => clip => slice => LSTM forecast
+    Only compute & return the future forecast for 'days' steps.
+    For Narwal market, since there is no grade, grade is ignored.
+    For other markets, we build the official trading window.
     """
     try:
         market = request.form.get('market')
@@ -206,37 +212,41 @@ def forecast():
         except (TypeError, ValueError):
             raise BadRequest("Days must be an integer.")
 
-        actual_market = validate_inputs(market, variety, grade, days)
+        # Validate inputs; for Narwal, grade will be set to None.
+        actual_market, grade = validate_inputs(market, variety, grade, days)
 
-        # Load LSTM => seq_length
+        # Load LSTM model => seq_length
         model, seq_length = load_lstm_model(actual_market, variety, grade)
         if model is None:
             raise RuntimeError("Model loading failed. No forecasting possible.")
 
-        # We assume the next "year" = current year
         current_year = datetime.date.today().year
         next_year = current_year
 
-        # Build entire official window
-        full_window = get_future_dates_for_trading_window(actual_market, variety, grade, next_year)
-        if not full_window:
-            raise RuntimeError("No official trading window or it's empty.")
-
-        # We'll clamp the window so it starts after 'today'
-        today_date = datetime.date.today()
-        hist_last_date_ts = pd.Timestamp(today_date)
-
-        clipped_window = clip_trading_window_after_hist_last_date(
-            hist_last_date_ts,
-            full_window[0],
-            full_window[-1]
-        )
-        if not clipped_window:
-            raise RuntimeError("Clipped window is empty after ensuring it starts after 'today'.")
-
-        # Slice to 'days'
-        clipped_window = clipped_window[:days]
-        future_days = len(clipped_window)
+        # For Narwal, we skip using a trading window and simply forecast days ahead from last historical date.
+        if actual_market == "Narwal":
+            df = load_dataset(actual_market, variety, grade)
+            if df is None:
+                raise RuntimeError("Dataset not found or invalid.")
+            df.sort_values(by="Date", inplace=True)
+            last_date = df["Date"].max()
+            clipped_window = [last_date + datetime.timedelta(days=i) for i in range(1, days+1)]
+            future_days = days
+        else:
+            full_window = get_future_dates_for_trading_window(actual_market, variety, grade, next_year)
+            if not full_window:
+                raise RuntimeError("No official trading window or it's empty.")
+            today_date = datetime.date.today()
+            hist_last_date_ts = pd.Timestamp(today_date)
+            clipped_window = clip_trading_window_after_hist_last_date(
+                hist_last_date_ts,
+                full_window[0],
+                full_window[-1]
+            )
+            if not clipped_window:
+                raise RuntimeError("Clipped window is empty after ensuring it starts after 'today'.")
+            clipped_window = clipped_window[:days]
+            future_days = len(clipped_window)
 
         # Load dataset => forecast
         df = load_dataset(actual_market, variety, grade)
@@ -257,7 +267,7 @@ def forecast():
             "status": "success",
             "market": actual_market,
             "variety": variety,
-            "grade": grade,
+            "grade": grade if grade else "",
             "forecast_days": future_days,
             "forecasted_prices": forecast_list,
             "future_dates": future_dates
