@@ -1,6 +1,5 @@
 ## Market Intelligence in Jammu & Kashmir
 
-Learn about our project on agricultural forecasting and market intelligence for Jammu & Kashmir by watching the video below:
+Watch our video on Market Intelligence for Jammu & Kashmir by clicking the link below:
 
-[![Market Intelligence in J&K](https://drive.google.com/file/d/14TugUYhrwzRdPwn0Cnk7A_uIs-VyWreV/view?usp=drive_link)
-
+[Watch the Video on Google Drive](https://drive.google.com/file/d/14TugUYhrwzRdPwn0Cnk7A_uIs-VyWreV/view?usp=drive_link)
