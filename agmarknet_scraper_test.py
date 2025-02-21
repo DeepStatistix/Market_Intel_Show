@@ -76,9 +76,9 @@ def scrape_agmarknet(commodity, state, market):
         state_dropdown.select_by_visible_text(state)
         
         # --- Step 3: Set Date (7 days ago) ---
-        logging.info("Setting date to 7 days ago...")
+        logging.info("Setting date to 15 days ago...")
         today = datetime.now()
-        desired_date = today - timedelta(days=7)
+        desired_date = today - timedelta(days=15)
         date_input = wait.until(EC.presence_of_element_located((By.ID, "txtDate")))
         date_input.clear()
         date_input.send_keys(desired_date.strftime('%d-%b-%Y'))

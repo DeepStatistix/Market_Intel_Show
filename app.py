@@ -199,8 +199,7 @@ def plot():
 def forecast():
     """
     Only compute & return the future forecast for 'days' steps.
-    For Narwal market, since there is no grade, grade is ignored.
-    For other markets, we build the official trading window.
+    All markets (including Narwal) are processed using the official trading window.
     """
     try:
         market = request.form.get('market')
@@ -214,10 +213,10 @@ def forecast():
         except (TypeError, ValueError):
             raise BadRequest("Days must be an integer.")
 
-        # Validate inputs; for Narwal, grade will be set to None.
+        # Validate inputs; for Narwal, validate_inputs sets grade to None.
         actual_market, grade = validate_inputs(market, variety, grade, days)
 
-        # Load LSTM model => seq_length
+        # Load LSTM model and retrieve sequence length.
         model, seq_length = load_lstm_model(actual_market, variety, grade)
         if model is None:
             raise RuntimeError("Model loading failed. No forecasting possible.")
@@ -225,32 +224,23 @@ def forecast():
         current_year = datetime.date.today().year
         next_year = current_year
 
-        # For Narwal, we skip using a trading window and simply forecast days ahead from last historical date.
-        if actual_market == "Narwal":
-            df = load_dataset(actual_market, variety, grade)
-            if df is None:
-                raise RuntimeError("Dataset not found or invalid.")
-            df.sort_values(by="Date", inplace=True)
-            last_date = df["Date"].max()
-            clipped_window = [last_date + datetime.timedelta(days=i) for i in range(1, days+1)]
-            future_days = days
-        else:
-            full_window = get_future_dates_for_trading_window(actual_market, variety, grade, next_year)
-            if not full_window:
-                raise RuntimeError("No official trading window or it's empty.")
-            today_date = datetime.date.today()
-            hist_last_date_ts = pd.Timestamp(today_date)
-            clipped_window = clip_trading_window_after_hist_last_date(
-                hist_last_date_ts,
-                full_window[0],
-                full_window[-1]
-            )
-            if not clipped_window:
-                raise RuntimeError("Clipped window is empty after ensuring it starts after 'today'.")
-            clipped_window = clipped_window[:days]
-            future_days = len(clipped_window)
+        # For all markets, obtain the official trading window.
+        full_window = get_future_dates_for_trading_window(actual_market, variety, grade, next_year)
+        if not full_window:
+            raise RuntimeError("No official trading window or it's empty.")
+        today_date = datetime.date.today()
+        hist_last_date_ts = pd.Timestamp(today_date)
+        clipped_window = clip_trading_window_after_hist_last_date(
+            hist_last_date_ts,
+            full_window[0],
+            full_window[-1]
+        )
+        if not clipped_window:
+            raise RuntimeError("Clipped window is empty after ensuring it starts after 'today'.")
+        clipped_window = clipped_window[:days]
+        future_days = len(clipped_window)
 
-        # Load dataset => forecast
+        # Load dataset for forecasting.
         df = load_dataset(actual_market, variety, grade)
         if df is None:
             raise RuntimeError("Dataset not found or invalid.")
@@ -264,7 +254,7 @@ def forecast():
         forecast_list = forecasted_prices.tolist()
         future_dates = [d.strftime("%Y-%m-%d") for d in clipped_window]
 
-        logging.info("✅ Only future forecast returned, no historical data.")
+        logging.info("✅ Future forecast generated successfully.")
         return jsonify({
             "status": "success",
             "market": actual_market,
@@ -278,6 +268,7 @@ def forecast():
     except Exception as e:
         logging.error(f"Error in /forecast route: {str(e)}")
         return jsonify({"status": "error", "message": str(e)}), 400
+
 # Register the blueprint
 
 CSV_PATH = "data/scraped/apple_data.csv"  # Path to your CSV

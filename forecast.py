@@ -171,54 +171,65 @@ def clip_trading_window_after_hist_last_date(hist_last_date, start_date, end_dat
         current += datetime.timedelta(days=1)
     return future_dates
 
+# file: forecast.py
+
 MARKET_TRADE_WINDOWS = {
     "Pulwama_Pachhar": {
         "American": {
-            "A":  ((9, 15), (11, 15)),  
-            "B":  ((9, 15), (11, 15))
+            "A": ((9, 15), (11, 15)),
+            "B": ((9, 15), (11, 15))
         },
         "Delicious": {
-            "A":  ((9, 15), (12, 15)),  
-            "B":  ((9, 15), (12, 15))
+            "A": ((9, 15), (12, 15)),
+            "B": ((9, 15), (12, 15))
         },
         "Kullu Delicious": {
-            "A":  ((9, 1),  (11, 15)),
-            "B":  ((9, 1),  (11, 15))
+            "A": ((9, 1), (11, 15)),
+            "B": ((9, 1), (11, 15))
         }
     },
     "Pulwama_Pricoo": {
         "American": {
-            "A":  ((9, 15), (11, 15)),
-            "B":  ((9, 15), (11, 15))
+            "A": ((9, 15), (11, 15)),
+            "B": ((9, 15), (11, 15))
         },
         "Delicious": {
-            "A":  ((9, 15), (12, 15)),
-            "B":  ((9, 15), (12, 15))
+            "A": ((9, 15), (12, 15)),
+            "B": ((9, 15), (12, 15))
         },
         "Kullu Delicious": {
-            "A":  ((9, 1),  (11, 15)),
-            "B":  ((9, 1),  (11, 15))
+            "A": ((9, 1), (11, 15)),
+            "B": ((9, 1), (11, 15))
         }
     },
     "Shopian": {
         "American": {
-            "A":  ((10, 1), (11, 30)),
-            "B":  ((10, 1), (11, 30))
+            "A": ((10, 1), (11, 30)),
+            "B": ((10, 1), (11, 30))
         },
         "Delicious": {
-            "A":  ((9, 15), (12, 31)),
-            "B":  ((9, 15), (12, 31))
+            "A": ((9, 15), (12, 31)),
+            "B": ((9, 15), (12, 31))
         },
         "Kullu Delicious": {
-            "A":  ((9, 1), (12, 15)),
-            "B":  ((9, 1), (12, 15))
+            "A": ((9, 1), (12, 15)),
+            "B": ((9, 1), (12, 15))
         },
         "Maharaji": {
-            "A":  ((10, 1), (11, 30)),
-            "B":  ((10, 1), (11, 30))
+            "A": ((10, 1), (11, 30)),
+            "B": ((10, 1), (11, 30))
         }
+    },
+    # New entry for Narwal (no grade column; each variety maps directly to its trading window)
+    "Narwal": {
+        "American": ((9, 1), (12, 31)),
+        "Condition": ((7, 1), (8, 31)),
+        "Delicious": ((8, 1), (2, 28)),    # Spanning August to February
+        "Hazratbali": ((7, 1), (8, 31)),
+        "Razakwadi": ((8, 1), (8, 31))
     }
 }
+
 
 def get_future_dates_for_trading_window(market, variety, grade, year):
     """Return list of daily dates for the specified year within the known trading window."""
@@ -230,14 +241,19 @@ def get_future_dates_for_trading_window(market, variety, grade, year):
     if not variety_entry:
         raise ValueError(f"No trading window for variety={variety} in {market}")
     
-    grade_entry = variety_entry.get(grade)
-    if not grade_entry:
-        raise ValueError(f"No trading window for grade={grade} of {variety} in {market}")
+    # For markets like Narwal (or when grade is None), use the variety entry directly.
+    if market == "Narwal" or grade is None:
+        trading_window = variety_entry
+    else:
+        trading_window = variety_entry.get(grade)
+        if not trading_window:
+            raise ValueError(f"No trading window for grade={grade} of {variety} in {market}")
     
-    (start_month_day, end_month_day) = grade_entry
+    (start_month_day, end_month_day) = trading_window
     start_month, start_day = start_month_day
-    end_month, end_day     = end_month_day
+    end_month, end_day = end_month_day
     
+    # Create dates for the specified year.
     start_date = datetime.date(year, start_month, start_day)
     end_date   = datetime.date(year, end_month, end_day)
     if end_date < start_date:
@@ -250,6 +266,7 @@ def get_future_dates_for_trading_window(market, variety, grade, year):
         current += datetime.timedelta(days=1)
     
     return future_dates
+
 
 # Standalone debug
 if __name__ == "__main__":
