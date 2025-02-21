@@ -352,7 +352,7 @@ def analysis():
         ("Karnataka", "Bangalore", "Binny Mill (F&V), Bangalore"),
         ("West Bengal", "Kolkata", "Mechua"),
         ("Uttar Pradesh", "Amethi", "Sultanpur"),
-        ("Srinagar", "Srinagar", "Parimpore")
+        ("Jammu and Kashmir", "Srinagar", "Parimpore")
     ]
 
     analysis_items = []
