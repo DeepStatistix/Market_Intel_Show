@@ -1,55 +1,59 @@
-<!-- file: templates/dashboard.html -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Agriculture Dashboard</title>
+  <title>Comparative Apple Data Analysis</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <!-- Load Plotly -->
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <style>
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+    .table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    .table th, .table td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    .table th {
+      background-color: #f2f2f2;
+    }
+    .plot-container {
+      margin-bottom: 40px;
+    }
+    hr {
+      margin: 40px 0;
+      border: 0;
+      border-top: 1px solid #ccc;
+    }
+  </style>
 </head>
 <body>
-  <h1>Agricultural Market Dashboard</h1>
-
-  <section>
-    <h2>Latest Agmarknet Data</h2>
-    {% if agmark_data %}
-      <table>
-        <thead>
-          <tr>
-            {% for col in agmark_data[0].keys() %}
-              <th>{{ col }}</th>
-            {% endfor %}
-          </tr>
-        </thead>
-        <tbody>
-          {% for row in agmark_data %}
-            <tr>
-              {% for val in row.values() %}
-                <td>{{ val }}</td>
-              {% endfor %}
-            </tr>
-          {% endfor %}
-        </tbody>
-      </table>
+  <div class="container">
+    <h1>Comparative Apple Data Analysis</h1>
+    
+    {% if analysis_items %}
+      {% for item in analysis_items %}
+        <h2>{{ item.combo_title }}</h2>
+        <div>
+          {{ item.table_html | safe }}
+        </div>
+        <div class="plot-container">
+          {{ item.plot_div | safe }}
+        </div>
+        <hr>
+      {% endfor %}
     {% else %}
-      <p>No market data available at the moment.</p>
+      <p>No data found for the specified combos.</p>
     {% endif %}
-  </section>
-
-  <section>
-    <h2>Agriculture News</h2>
-    {% if news_articles %}
-      <ul>
-        {% for article in news_articles %}
-          <li>
-            <a href="{{ article.url }}" target="_blank">{{ article.title }}</a><br>
-            <small>{{ article.source.name if article.source }}</small><br>
-            <p>{{ article.description }}</p>
-          </li>
-        {% endfor %}
-      </ul>
-    {% else %}
-      <p>No news articles found.</p>
-    {% endif %}
-  </section>
+  </div>
 </body>
 </html>

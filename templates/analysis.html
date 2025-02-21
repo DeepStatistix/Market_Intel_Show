@@ -2,16 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Apple Data Analysis</title>
-  <!-- Load a CSS file if desired -->
+  <title>Comparative Apple Data Analysis</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-  <!-- Load Plotly -->
-  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <style>
     .container {
       max-width: 1200px;
       margin: auto;
       padding: 20px;
+      font-family: Arial, sans-serif;
     }
     .table {
       width: 100%;
@@ -21,6 +19,7 @@
     .table th, .table td {
       border: 1px solid #ddd;
       padding: 8px;
+      text-align: left;
     }
     .table th {
       background-color: #f2f2f2;
@@ -28,22 +27,25 @@
     .plot-container {
       margin-bottom: 40px;
     }
+    hr {
+      margin: 40px 0;
+      border: 0;
+      border-top: 1px solid #ccc;
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>Comparative Apple Data Analysis</h1>
-
+    
     {% if analysis_items %}
       {% for item in analysis_items %}
         <h2>{{ item.combo_title }}</h2>
-        <!-- Show the latest data table -->
         <div>
           {{ item.table_html|safe }}
         </div>
-        <!-- Show the plotly chart -->
         <div class="plot-container">
-          {{ item.plot_div|safe }}
+          <img src="{{ item.plot_img }}" alt="Plot for {{ item.combo_title }}" style="max-width:100%; height:auto;">
         </div>
         <hr>
       {% endfor %}

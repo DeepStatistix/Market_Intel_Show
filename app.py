@@ -5,7 +5,9 @@ matplotlib.use('Agg')
 import logging
 import datetime
 import json
-
+import seaborn as sns
+from io import BytesIO
+import base64
 import matplotlib.dates as mdates
 import pandas as pd
 import numpy as np
@@ -318,8 +320,9 @@ def analysis_form():
 @app.route('/analysis', methods=['GET'])
 def analysis():
     """
-    Loads the scraped apple data from a CSV file, filters for specific state-market combos,
-    creates a table and a separate Plotly chart for each, and displays them on one page.
+    Loads the scraped apple data from a CSV file, filters for specific state-district-market combos,
+    creates a table and a separate Matplotlib chart for each (with hue for Variety and Grade),
+    and displays them on one page.
     """
     csv_path = "data/scraped/apple_data.csv"
     if not os.path.exists(csv_path):
@@ -328,35 +331,40 @@ def analysis():
     # 1. Load the CSV
     df = pd.read_csv(csv_path)
     
-    # 2. Convert price columns to numeric & Date to datetime
+    # 2. Ensure price columns are numeric (remove commas then convert)
     for col in ['Min Price', 'Max Price', 'Model Price']:
+        df[col] = df[col].astype(str).str.replace(",", "", regex=False)
         df[col] = pd.to_numeric(df[col], errors='coerce')
+    
+    # Convert Date to datetime
     df['Date'] = pd.to_datetime(df['Date'], format='%d %b %Y', errors='coerce')
     df.dropna(subset=['Date'], inplace=True)
     df.sort_values(by="Date", inplace=True)
+    
+    # Debug: Print dtypes and sample values
+    print("Dtypes after conversion:\n", df.dtypes)
+    print("Sample Model Price values:\n", df['Model Price'].head())
 
-    # 3. Define the combos you want
-    # The CSV has 'District' and 'Market' columns for states and markets
+    # 3. Define default combos as (State, District, Market)
     combos = [
-        ("Srinagar", "Parimpore"),
-        ("Jammu", "Narwal Jammu (F&V)"),
-        ("Delhi", "Azadpur"),
-        ("Bangalore", "Binny Mill (F&V)"),
-        ("Kolkata", "Mechua"),
-        ("Amethi", "Sultanpur")
+        ("Jammu and Kashmir", "Jammu", "Narwal Jammu (F&V)"),
+        ("NCT of Delhi", "Delhi", "Azadpur"),
+        ("Karnataka", "Bangalore", "Binny Mill (F&V), Bangalore"),
+        ("West Bengal", "Kolkata", "Mechua"),
+        ("Uttar Pradesh", "Amethi", "Sultanpur"),
+        ("Srinagar", "Srinagar", "Parimpore")
     ]
 
     analysis_items = []
 
-    for (district_val, market_val) in combos:
-        # 4. Filter the DataFrame for each state–market combo
-        subdf = df[(df['District'] == district_val) & (df['Market'] == market_val)].copy()
+    for (state_val, district_val, market_val) in combos:
+        # 4. Filter the DataFrame for each state-district-market combo
+        subdf = df[(df['State'] == state_val) & (df['District'] == district_val) & (df['Market'] == market_val)].copy()
         if subdf.empty:
-            logging.info(f"No data found for District={district_val}, Market={market_val}")
+            logging.info(f"No data found for State={state_val}, District={district_val}, Market={market_val}")
             continue
-        
-        # 5. Build a table of the latest data
-        # e.g. last 10 rows or so, sorted descending by Date
+
+        # 5. Build a table of the latest data (last 10 rows sorted by Date descending)
         subdf_latest = subdf.sort_values(by="Date", ascending=False).head(10)
         table_html = subdf_latest.to_html(
             classes="table table-striped",
@@ -364,35 +372,31 @@ def analysis():
             border=0
         )
 
-        # 6. Create a separate Plotly figure for this combo
-        fig = make_subplots(rows=1, cols=1, subplot_titles=[f"{district_val} - {market_val}"])
-        
-        # You can plot Model Price (or Min/Max). 
-        # Or plot multiple lines for each Variety/Grade combination, for example:
-        for (variety_val, grade_val), group in subdf.groupby(["Variety", "Grade"]):
-            trace_name = f"{variety_val} ({grade_val})"
-            fig.add_trace(go.Scatter(
-                x=group['Date'],
-                y=group['Model Price'],
-                mode='lines+markers',
-                name=trace_name
-            ), row=1, col=1)
-        
-        fig.update_layout(
-            xaxis_title="Date",
-            yaxis_title="Price (₹/kg)",
-            template="plotly_white",
-            margin=dict(l=40, r=40, t=40, b=40)
-        )
+        # 6. Create a Matplotlib figure for this combo
+        # Create a new column combining Variety and Grade for use as hue
+        subdf["Variety_Grade"] = subdf["Variety"] + " (" + subdf["Grade"] + ")"
 
-        plot_div = pyo.plot(fig, include_plotlyjs=False, output_type='div')
+        plt.figure(figsize=(8, 5))
+        sns.lineplot(data=subdf, x="Date", y="Model Price", hue="Variety_Grade", marker="o")
+        plt.title(f"{state_val} - {district_val} - {market_val}")
+        plt.xlabel("Date")
+        plt.ylabel("Price (₹/quintal)")  # Adjust if your data is in ₹/kg; you might multiply by 100
+        plt.xticks(rotation=45)
+        plt.tight_layout()
         
-        # 7. Store all the info for the template
-        combo_title = f"{district_val} - {market_val}"
+        # Save the figure to a BytesIO buffer
+        buf = BytesIO()
+        plt.savefig(buf, format="png")
+        buf.seek(0)
+        image_base64 = base64.b64encode(buf.getvalue()).decode("utf8")
+        plt.close()  # Close the figure to free memory
+        plot_img = f"data:image/png;base64,{image_base64}"
+        
+        # 7. Append the combo's results
         analysis_items.append({
-            "combo_title": combo_title,
+            "combo_title": f"{state_val} - {district_val} - {market_val}",
             "table_html": table_html,
-            "plot_div": plot_div
+            "plot_img": plot_img
         })
 
     return render_template("analysis.html", analysis_items=analysis_items)
